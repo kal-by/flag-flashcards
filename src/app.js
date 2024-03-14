@@ -76,7 +76,6 @@ const getRegions = () => {
   for (const cb of document.querySelectorAll(":checked")) {
     regions.push(cb.value);
   }
-  console.log(regions);
 };
 
 const buildSettings = () => {
