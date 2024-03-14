@@ -103,7 +103,10 @@ const toggleShowHowTo = (e) => {
 
 const toggleShowSettings = (e) => {
   // don't allow settings modal to close if game is over
-  if (!settingsModal.classList.contains("hidden") && !current.next) {
+  if (
+    !settingsModal.classList.contains("hidden") &&
+    correct.length + incorrect.length == countries.length
+  ) {
     return;
   }
   if (e.target == settingsBtn || e.target == settingsModal) {
