@@ -5,6 +5,7 @@ $boder-radius: 0.35rem;
 $color-bg: #111114;
 $color-bg-card: #25252e;
 $color-text: rgb(221, 221, 221);
+$color-text-hint: rgb(150, 150, 150);
 $color-success: #00bd3f;
 $color-danger: #bd1c00;
 $color-disabled: #4a4c52;
@@ -32,6 +33,10 @@ $color-disabled: #4a4c52;
   transform: translate(-50%, -50%);
 }
 
+.hint {
+  color: $color-text-hint;
+}
+
 * {
   font-family: monospace;
   font-weight: 700;
@@ -42,6 +47,10 @@ html,
 body {
   overflow: hidden;
   background-color: $color-bg;
+}
+
+label {
+  user-select: none;
 }
 
 button {
@@ -111,7 +120,7 @@ h1.nav {
 }
 
 .container {
-  padding: 5px;
+  padding: 0.5rem;
   display: flex;
   max-width: 900px;
   min-width: 100px;
@@ -206,7 +215,7 @@ h1.nav {
   border-radius: $boder-radius;
   background-color: $color-bg-card;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   width: 50%;
   max-width: 30rem;
   z-index: 1001;

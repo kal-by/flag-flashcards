@@ -71,24 +71,40 @@ const slideCardRight = (card) => {
   card.classList.toggle("slide-right");
 };
 
-const getRegions = () => {
-  regions = [];
-  for (const cb of document.querySelectorAll(":checked")) {
-    regions.push(cb.value);
-  }
+const saveSettings = () => {
+  localStorage.setItem("regions", JSON.stringify(regions));
 };
 
-const buildSettings = () => {
+const loadSettings = () => {
+  regions = JSON.parse(localStorage.getItem("regions"));
+};
+
+const getRegions = () => {
+  regions = JSON.parse(localStorage.getItem("regions"));
+};
+
+const buildSettingsModal = () => {
   updateScore();
   for (const region of allRegions) {
     const regionCb = document.createElement("input");
     regionCb.type = "checkbox";
     regionCb.name = region;
     regionCb.value = region;
-    regionCb.checked = true;
+    regionCb.checked = regions.includes(region);
+    regionCb.addEventListener("change", () => {
+      if (regionCb.checked) {
+        regions.push(region);
+      } else {
+        regions.splice(regions.indexOf(region), 1);
+      }
+      saveSettings();
+    });
     const regionLabel = document.createElement("label");
     regionLabel.setAttribute("for", region);
     regionLabel.innerHTML = region;
+    regionLabel.addEventListener("click", () => {
+      regionCb.checked = !regionCb.checked;
+    });
     regionSettings.appendChild(regionCb);
     regionSettings.appendChild(regionLabel);
     regionSettings.appendChild(document.createElement("br"));
@@ -236,5 +252,6 @@ correctBtn.addEventListener("click", getNextCard);
 incorrectBtn.addEventListener("click", getNextCard);
 
 // start
-buildSettings();
+loadSettings();
+buildSettingsModal();
 buildDeck();
