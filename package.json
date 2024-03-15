@@ -6,7 +6,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --dist-dir public"
+    "build": "rm -rf public && parcel build --dist-dir public"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
