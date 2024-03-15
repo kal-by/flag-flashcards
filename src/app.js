@@ -71,16 +71,21 @@ const slideCardRight = (card) => {
   card.classList.toggle("slide-right");
 };
 
+const initializeSettings = () => {
+  regions = allRegions.slice(0);
+  saveSettings();
+};
+
 const saveSettings = () => {
   localStorage.setItem("regions", JSON.stringify(regions));
 };
 
 const loadSettings = () => {
-  regions = JSON.parse(localStorage.getItem("regions"));
-};
-
-const getRegions = () => {
-  regions = JSON.parse(localStorage.getItem("regions"));
+  if (localStorage.getItem("regions")) {
+    regions = JSON.parse(localStorage.getItem("regions"));
+  } else {
+    initializeSettings();
+  }
 };
 
 const buildSettingsModal = () => {
@@ -166,7 +171,7 @@ const buildCard = (country, zIndex) => {
 };
 
 const buildDeck = () => {
-  getRegions();
+  loadSettings();
   countries = allCountries.filter((country) =>
     regions.includes(country.region)
   );
