@@ -32,9 +32,10 @@ const incorrect = [];
 const howToModal = document.getElementById("howToModal");
 const howToBtn = document.getElementById("howToBtn");
 const settingsModal = document.getElementById("settingsModal");
-const regionSettings = document.getElementById("regionSettings");
 const scoreText = document.getElementById("scoreText");
 const settingsBtn = document.getElementById("settingsBtn");
+const regionSettings = document.getElementById("regionSettings");
+const settingsError = document.getElementById("settingsError");
 const resetBtn = document.getElementById("resetBtn");
 // cards and controls
 const deck = document.getElementById("deck");
@@ -108,12 +109,14 @@ const buildSettingsModal = () => {
     regionCb.addEventListener("change", () => {
       if (regionCb.checked) {
         settings.regions.push(region);
+        hideSettingsError();
       } else {
-        if (settings.regions.length > 1) {
-          settings.regions.splice(settings.regions.indexOf(region), 1);
-        } else {
-          regionCb.checked = true;
-        }
+        settings.regions.splice(settings.regions.indexOf(region), 1);
+        // if (settings.regions.length > 1) {
+        // } else {
+        //   regionCb.checked = true;
+        //   showSettingsError("Must select at least one region");
+        // }
       }
       saveSettings();
     });
@@ -127,6 +130,14 @@ const buildSettingsModal = () => {
     regionSettings.appendChild(regionLabel);
     regionSettings.appendChild(document.createElement("br"));
   }
+};
+
+const showSettingsError = (message) => {
+  settingsError.innerHTML = message;
+};
+
+const hideSettingsError = () => {
+  settingsError.innerHTML = "";
 };
 
 const toggleShowHowTo = (e) => {
@@ -251,12 +262,17 @@ const updateScore = () => {
 };
 
 const reset = () => {
+  if (settings.regions.length == 0) {
+    showSettingsError("Please select at least one region");
+    return;
+  }
   correct.length = 0;
   incorrect.length = 0;
   deck.replaceChildren();
   buildDeck();
   updateScore();
   toggleShowSettings({ target: settingsBtn });
+  hideSettingsError();
 };
 
 // add event listeners

@@ -37,6 +37,38 @@ $color-disabled: #4a4c52;
   color: $color-text-hint;
 }
 
+.container {
+  padding: 0.5rem;
+  display: flex;
+  max-width: 900px;
+  // min-width: 100px;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  border-radius: $boder-radius;
+  background-color: $color-bg-card;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 50%;
+  max-width: 30rem;
+  z-index: 1001;
+}
+
+// html elements
 * {
   font-family: monospace;
   font-weight: 700;
@@ -58,7 +90,6 @@ button {
   border-radius: $boder-radius;
   padding: 1rem;
   margin: 0.5rem;
-  // min-width: 6rem;
   flex-grow: 1;
   flex-basis: 0;
 
@@ -115,17 +146,18 @@ button {
   }
 }
 
+// nav and settings
 h1.nav {
   flex-grow: 1;
 }
 
-.container {
-  padding: 0.5rem;
-  display: flex;
-  max-width: 900px;
-  min-width: 100px;
+.settingsError {
+  color: $color-danger;
+  height: 1em;
+  padding: 0.5em;
 }
 
+// cards and controls
 .deck {
   width: 100%;
   min-width: 250px;
@@ -195,28 +227,4 @@ h1.nav {
   &.danger {
     color: $color-danger;
   }
-}
-
-.modal {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  border-radius: $boder-radius;
-  background-color: $color-bg-card;
-  margin: 0 auto;
-  padding: 2rem;
-  width: 50%;
-  max-width: 30rem;
-  z-index: 1001;
 }
