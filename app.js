@@ -86,7 +86,11 @@ const saveSettings = () => {
 
 const loadSettings = () => {
   const lsSettings = JSON.parse(localStorage.getItem("settings"));
-  if (lsSettings && lsSettings.version == version) {
+  if (
+    lsSettings &&
+    lsSettings.version == version &&
+    lsSettings.regions.length > 0
+  ) {
     settings = lsSettings;
   } else {
     initialize();
@@ -102,11 +106,14 @@ const buildSettingsModal = () => {
     regionCb.value = region;
     regionCb.checked = settings.regions.includes(region);
     regionCb.addEventListener("change", () => {
-      console.log("checkbox");
       if (regionCb.checked) {
         settings.regions.push(region);
       } else {
-        settings.regions.splice(settings.regions.indexOf(region), 1);
+        if (settings.regions.length > 1) {
+          settings.regions.splice(settings.regions.indexOf(region), 1);
+        } else {
+          regionCb.checked = true;
+        }
       }
       saveSettings();
     });
@@ -177,7 +184,6 @@ const buildCard = (country, zIndex) => {
 };
 
 const buildDeck = () => {
-  loadSettings();
   countries = allCountries.filter((country) =>
     settings.regions.includes(country.region)
   );
@@ -259,6 +265,7 @@ howToModal.addEventListener("click", toggleShowHowTo);
 settingsBtn.addEventListener("click", toggleShowSettings);
 settingsModal.addEventListener("click", toggleShowSettings);
 resetBtn.addEventListener("click", reset);
+
 correctBtn.addEventListener("click", getNextCard);
 incorrectBtn.addEventListener("click", getNextCard);
 
