@@ -97,6 +97,7 @@ const buildSettingsModal = () => {
     regionCb.value = region;
     regionCb.checked = regions.includes(region);
     regionCb.addEventListener("change", () => {
+      console.log("checkbox");
       if (regionCb.checked) {
         regions.push(region);
       } else {
@@ -108,7 +109,7 @@ const buildSettingsModal = () => {
     regionLabel.setAttribute("for", region);
     regionLabel.innerHTML = region;
     regionLabel.addEventListener("click", () => {
-      regionCb.checked = !regionCb.checked;
+      regionCb.click();
     });
     regionSettings.appendChild(regionCb);
     regionSettings.appendChild(regionLabel);
