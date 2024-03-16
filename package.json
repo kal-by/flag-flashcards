@@ -4,8 +4,9 @@
   "description": "World flags flashcard game",
   "author": "David Himelick",
   "scripts": {
-    "start": "vite serve",
-    "build": "vite build"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite build && vite preview"
   },
   "devDependencies": {
     "sass": "^1.71.1",
