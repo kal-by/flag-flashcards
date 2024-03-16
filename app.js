@@ -1,5 +1,7 @@
-// const ccs = require("country-codes-list");
 import { all } from "country-codes-list";
+const version = import.meta.env.VITE_REACT_APP_VERSION;
+
+let settings = {};
 
 const allRegions = [
   "Africa",
@@ -19,7 +21,6 @@ const allRegions = [
   "South/Latin America",
   "Unknown",
 ];
-let regions;
 const allCountries = all();
 let countries;
 let current;
@@ -72,20 +73,23 @@ const slideCardRight = (card) => {
   card.classList.toggle("slide-right");
 };
 
-const initializeSettings = () => {
-  regions = allRegions.slice(0);
+const initialize = () => {
+  localStorage.clear();
+  settings.version = version;
+  settings.regions = allRegions.slice(0);
   saveSettings();
 };
 
 const saveSettings = () => {
-  localStorage.setItem("regions", JSON.stringify(regions));
+  localStorage.setItem("settings", JSON.stringify(settings));
 };
 
 const loadSettings = () => {
-  if (localStorage.getItem("regions")) {
-    regions = JSON.parse(localStorage.getItem("regions"));
+  const lsSettings = JSON.parse(localStorage.getItem("settings"));
+  if (lsSettings && lsSettings.version == version) {
+    settings = lsSettings;
   } else {
-    initializeSettings();
+    initialize();
   }
 };
 
@@ -96,13 +100,13 @@ const buildSettingsModal = () => {
     regionCb.type = "checkbox";
     regionCb.name = region;
     regionCb.value = region;
-    regionCb.checked = regions.includes(region);
+    regionCb.checked = settings.regions.includes(region);
     regionCb.addEventListener("change", () => {
       console.log("checkbox");
       if (regionCb.checked) {
-        regions.push(region);
+        settings.regions.push(region);
       } else {
-        regions.splice(regions.indexOf(region), 1);
+        settings.regions.splice(settings.regions.indexOf(region), 1);
       }
       saveSettings();
     });
@@ -175,7 +179,7 @@ const buildCard = (country, zIndex) => {
 const buildDeck = () => {
   loadSettings();
   countries = allCountries.filter((country) =>
-    regions.includes(country.region)
+    settings.regions.includes(country.region)
   );
   shuffle(countries);
   for (let i = 0; i < countries.length; i++) {
