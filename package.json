@@ -3,16 +3,13 @@
   "version": "0.1.0",
   "description": "World flags flashcard game",
   "author": "David Himelick",
-  "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "rm -rf public && parcel build --dist-dir public"
+    "start": "vite serve",
+    "build": "vite build"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.12.0",
-    "parcel": "^2.12.0",
-    "parcel-reporter-static-files-copy": "^1.5.3",
-    "sass": "^1.71.1"
+    "sass": "^1.71.1",
+    "vite": "^5.1.6"
   },
   "dependencies": {
     "country-codes-list": "^1.6.11"

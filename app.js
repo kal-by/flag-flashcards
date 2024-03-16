@@ -1,4 +1,5 @@
-const ccs = require("country-codes-list");
+// const ccs = require("country-codes-list");
+import { all } from "country-codes-list";
 
 const allRegions = [
   "Africa",
@@ -19,7 +20,7 @@ const allRegions = [
   "Unknown",
 ];
 let regions;
-const allCountries = ccs.all();
+const allCountries = all();
 let countries;
 let current;
 const correct = [];
