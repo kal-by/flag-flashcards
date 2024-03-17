@@ -1,27 +1,18 @@
-import { all } from "country-codes-list";
+import countryData from "./countryData";
 const version = import.meta.env.VITE_REACT_APP_VERSION;
 
 let settings = {};
 
 const allRegions = [
   "Africa",
-  "Arab States",
-  "Asia & Pacific",
+  "Antarctica",
   "Asia",
-  "Atlantic Ocean",
-  "Australia",
-  "Caribbean Sea",
-  "Caribbean",
   "Europe",
-  "Indian Ocean",
   "North America",
-  "Pacific Ocean",
-  "South Atlantic Ocean",
-  "South Pacific Ocean",
-  "South/Latin America",
-  "Unknown",
+  "Oceania",
+  "South America",
 ];
-const allCountries = all();
+const allCountries = countryData;
 let countries;
 let current;
 const correct = [];

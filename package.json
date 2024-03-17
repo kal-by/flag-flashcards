@@ -1,6 +1,6 @@
 {
   "name": "flag-flashcards",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "World flags flashcard game",
   "author": "David Himelick",
   "scripts": {
@@ -11,8 +11,5 @@
   "devDependencies": {
     "sass": "^1.71.1",
     "vite": "^5.1.6"
-  },
-  "dependencies": {
-    "country-codes-list": "^1.6.11"
   }
 }
