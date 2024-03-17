@@ -120,6 +120,11 @@ const buildSettingsModal = () => {
 };
 
 const showSettingsMessage = (message, type) => {
+  if (settingsMessage.classList.contains("success")) {
+    settingsMessage.classList.remove("success");
+  } else if (settingsMessage.classList.contains("danger")) {
+    settingsMessage.classList.remove("danger");
+  }
   settingsMessage.innerHTML = message;
   settingsMessage.classList.add(type);
 };
