@@ -26,8 +26,9 @@ const settingsModal = document.getElementById("settingsModal");
 const scoreText = document.getElementById("scoreText");
 const settingsBtn = document.getElementById("settingsBtn");
 const regionSettings = document.getElementById("regionSettings");
-const settingsError = document.getElementById("settingsError");
+const settingsMessage = document.getElementById("settingsMessage");
 const resetBtn = document.getElementById("resetBtn");
+const repeatBtn = document.getElementById("repeatBtn");
 // cards and controls
 const deck = document.getElementById("deck");
 const correctScore = document.getElementById("correctScore");
@@ -100,14 +101,9 @@ const buildSettingsModal = () => {
     regionCb.addEventListener("change", () => {
       if (regionCb.checked) {
         settings.regions.push(region);
-        hideSettingsError();
+        hideSettingsMessage();
       } else {
         settings.regions.splice(settings.regions.indexOf(region), 1);
-        // if (settings.regions.length > 1) {
-        // } else {
-        //   regionCb.checked = true;
-        //   showSettingsError("Must select at least one region");
-        // }
       }
       saveSettings();
     });
@@ -123,12 +119,15 @@ const buildSettingsModal = () => {
   }
 };
 
-const showSettingsError = (message) => {
-  settingsError.innerHTML = message;
+const showSettingsMessage = (message, type) => {
+  settingsMessage.innerHTML = message;
+  settingsMessage.classList.add(type);
 };
 
-const hideSettingsError = () => {
-  settingsError.innerHTML = "";
+const hideSettingsMessage = () => {
+  settingsMessage.innerHTML = "";
+  settingsMessage.classList.remove("success");
+  settingsMessage.classList.remove("danger");
 };
 
 const toggleShowHowTo = (e) => {
@@ -147,6 +146,7 @@ const toggleShowSettings = (e) => {
   }
   if (e.target == settingsBtn || e.target == settingsModal) {
     toggleHidden(settingsModal);
+    hideSettingsMessage();
   }
 };
 
@@ -185,10 +185,12 @@ const buildCard = (country, zIndex) => {
   return card;
 };
 
-const buildDeck = () => {
-  countries = allCountries.filter((country) =>
-    settings.regions.includes(country.region)
-  );
+const buildDeck = (repeatIncorrect = false) => {
+  if (!repeatIncorrect) {
+    countries = allCountries.filter((country) =>
+      settings.regions.includes(country.region)
+    );
+  }
   shuffle(countries);
   for (let i = 0; i < countries.length; i++) {
     const country = countries[i];
@@ -254,7 +256,7 @@ const updateScore = () => {
 
 const reset = () => {
   if (settings.regions.length == 0) {
-    showSettingsError("Please select at least one region");
+    showSettingsMessage("Please select at least one region to reset", "danger");
     return;
   }
   correct.length = 0;
@@ -263,7 +265,24 @@ const reset = () => {
   buildDeck();
   updateScore();
   toggleShowSettings({ target: settingsBtn });
-  hideSettingsError();
+};
+
+const repeat = () => {
+  if (correct.length + incorrect.length == 0) {
+    showSettingsMessage("No incorrect flags to repeat yet", "success");
+    return;
+  }
+  if (incorrect.length == 0) {
+    showSettingsMessage("No incorrect flags to repeat - good job!", "success");
+    return;
+  }
+  countries = incorrect.slice(0);
+  correct.length = 0;
+  incorrect.length = 0;
+  deck.replaceChildren();
+  buildDeck(true);
+  updateScore();
+  toggleShowSettings({ target: settingsBtn });
 };
 
 // add event listeners
@@ -272,6 +291,7 @@ howToModal.addEventListener("click", toggleShowHowTo);
 settingsBtn.addEventListener("click", toggleShowSettings);
 settingsModal.addEventListener("click", toggleShowSettings);
 resetBtn.addEventListener("click", reset);
+repeatBtn.addEventListener("click", repeat);
 
 correctBtn.addEventListener("click", getNextCard);
 incorrectBtn.addEventListener("click", getNextCard);

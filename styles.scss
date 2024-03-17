@@ -151,10 +151,17 @@ h1.nav {
   flex-grow: 1;
 }
 
-.settingsError {
-  color: $color-danger;
-  height: 1em;
+.settingsMessage {
+  height: 2em;
   padding: 0.5em;
+
+  &.success {
+    color: $color-success;
+  }
+
+  &.danger {
+    color: $color-danger;
+  }
 }
 
 // cards and controls
