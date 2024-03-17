@@ -38,6 +38,10 @@ $color-disabled: #4a4c52;
   color: $color-text-hint;
 }
 
+.block {
+  padding-bottom: 1rem;
+}
+
 .container {
   padding: 0.5rem;
   display: flex;
@@ -63,7 +67,7 @@ $color-disabled: #4a4c52;
   border-radius: $boder-radius;
   background-color: $color-bg-card;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   width: 50%;
   max-width: 30rem;
   z-index: 1001;
