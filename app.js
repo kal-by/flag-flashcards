@@ -26,9 +26,9 @@ const settingsModal = document.getElementById("settingsModal");
 const scoreText = document.getElementById("scoreText");
 const settingsBtn = document.getElementById("settingsBtn");
 const regionSettings = document.getElementById("regionSettings");
-const settingsMessage = document.getElementById("settingsMessage");
 const resetBtn = document.getElementById("resetBtn");
 const repeatBtn = document.getElementById("repeatBtn");
+const toast = document.getElementById("toast");
 // cards and controls
 const deck = document.getElementById("deck");
 const correctScore = document.getElementById("correctScore");
@@ -101,7 +101,6 @@ const buildSettingsModal = () => {
     regionCb.addEventListener("change", () => {
       if (regionCb.checked) {
         settings.regions.push(region);
-        hideSettingsMessage();
       } else {
         settings.regions.splice(settings.regions.indexOf(region), 1);
       }
@@ -119,20 +118,20 @@ const buildSettingsModal = () => {
   }
 };
 
-const showSettingsMessage = (message, type) => {
-  if (settingsMessage.classList.contains("success")) {
-    settingsMessage.classList.remove("success");
-  } else if (settingsMessage.classList.contains("danger")) {
-    settingsMessage.classList.remove("danger");
+const showToast = (message, type) => {
+  if (toast.style.animationPlayState == "running") {
+    return;
   }
-  settingsMessage.innerHTML = message;
-  settingsMessage.classList.add(type);
+  toast.innerHTML = message;
+  toast.classList.add(type);
+  toast.classList.add("show");
+  toast.style.animationPlayState = "running";
 };
 
-const hideSettingsMessage = () => {
-  settingsMessage.innerHTML = "";
-  settingsMessage.classList.remove("success");
-  settingsMessage.classList.remove("danger");
+const clearToast = () => {
+  toast.classList.remove("show", "success", "danger");
+  toast.innerHTML = "";
+  toast.style.animationPlayState = "paused";
 };
 
 const toggleShowHowTo = (e) => {
@@ -151,7 +150,6 @@ const toggleShowSettings = (e) => {
   }
   if (e.target == settingsBtn || e.target == settingsModal) {
     toggleHidden(settingsModal);
-    hideSettingsMessage();
   }
 };
 
@@ -261,7 +259,7 @@ const updateScore = () => {
 
 const reset = () => {
   if (settings.regions.length == 0) {
-    showSettingsMessage("Please select at least one region to reset", "danger");
+    showToast("Please select at least one region to reset", "danger");
     return;
   }
   correct.length = 0;
@@ -274,11 +272,11 @@ const reset = () => {
 
 const repeat = () => {
   if (correct.length + incorrect.length == 0) {
-    showSettingsMessage("No incorrect flags to repeat yet", "success");
+    showToast("No incorrect flags to repeat yet", "success");
     return;
   }
   if (incorrect.length == 0) {
-    showSettingsMessage("No incorrect flags to repeat - good job!", "success");
+    showToast("No incorrect flags to repeat - good job!", "success");
     return;
   }
   countries = incorrect.slice(0);
@@ -297,6 +295,7 @@ settingsBtn.addEventListener("click", toggleShowSettings);
 settingsModal.addEventListener("click", toggleShowSettings);
 resetBtn.addEventListener("click", reset);
 repeatBtn.addEventListener("click", repeat);
+toast.addEventListener("animationend", clearToast);
 
 correctBtn.addEventListener("click", getNextCard);
 incorrectBtn.addEventListener("click", getNextCard);

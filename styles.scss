@@ -240,3 +240,51 @@ h1.nav {
     color: $color-danger;
   }
 }
+
+.toastContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 10rem;
+  background-color: $color-bg-card;
+  text-align: center;
+  border-radius: $boder-radius;
+  padding: 1rem;
+  position: fixed;
+  z-index: 2000;
+  // top: 3rem;
+
+  &.success {
+    background-color: $color-success;
+  }
+
+  &.danger {
+    background-color: $color-danger;
+  }
+
+  &.show {
+    visibility: visible;
+    animation-play-state: running;
+    animation: fadeinout 3s;
+  }
+}
+
+@keyframes fadeinout {
+  0% {
+    top: 1.5rem;
+    opacity: 0;
+  }
+  20%,
+  80% {
+    top: 3rem;
+    opacity: 1;
+  }
+  100% {
+    top: 1.5rem;
+    opacity: 0;
+  }
+}

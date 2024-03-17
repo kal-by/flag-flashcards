@@ -50,7 +50,6 @@
           <button class="danger" id="resetBtn">Reset</button>
           <button class="success" id="repeatBtn">Repeat incorrect</button>
         </div>
-        <div class="settingsMessage" id="settingsMessage"></div>
         <hr />
         <h2>Regions</h2>
         <p class="hint">(applied after <strong>Reset</strong>)</p>
@@ -75,6 +74,8 @@
       <h1 class="score success" id="correctScore"></h1>
       <h1 class="score danger" id="incorrectScore"></h1>
     </div>
-    <div class="error" id="errorToast"></div>
+    <div class="toastContainer">
+      <div class="toast" id="toast"></div>
+    </div>
   </body>
 </html>
