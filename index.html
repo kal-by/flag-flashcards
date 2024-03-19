@@ -40,7 +40,28 @@
     </div>
     <div class="modal hidden" id="settingsModal">
       <div class="modal-content hcentered">
-        <div id="scoreText"></div>
+        <div class="settingScoreDisplay">
+          <div class="container">
+            <div class="scoreDisplayBlock">
+              <h1 class="score" id="percentScore">-</h1>
+              <div class="score hint">correctly guessed</div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="scoreDisplayBlock">
+              <h1 class="score success correctScore" id="correctScore">-</h1>
+              <div class="score hint">correct</div>
+            </div>
+            <div class="scoreDisplayBlock">
+              <h1 class="score danger incorrectScore" id="incorrectScore">-</h1>
+              <div class="score hint">incorrect</div>
+            </div>
+            <div class="scoreDisplayBlock">
+              <h1 class="score flagCount" id="flagCount">-</h1>
+              <div class="score hint">guessed</div>
+            </div>
+          </div>
+        </div>
         <hr />
         <p class="hint">
           Use <strong>Reset</strong> to start over or
@@ -53,8 +74,8 @@
           </button>
         </div>
         <hr />
-        <h2>Regions</h2>
-        <p class="hint">(applied after <strong>Reset</strong>)</p>
+        <h2 class="mb-0">Regions</h2>
+        <p class="hint mt-0">(applied after <strong>Reset</strong>)</p>
         <div class="hcentered">
           <div class="block hleft" id="regionSettings"></div>
         </div>
@@ -66,7 +87,7 @@
       <button class="nav" id="settingsBtn">⋮</button>
     </div>
     <div class="container hcentered">
-      <div class="deck" id="deck"><div class="cardFront"></div></div>
+      <div class="deck" id="deck"></div>
     </div>
     <div class="container hcentered">
       <button class="control success" id="correctBtn">Correct</button>
@@ -75,18 +96,18 @@
     <div class="container hcentered">
       <div class="scoreDisplay">
         <div class="scoreDisplayBlock">
-          <h1 class="score success" id="correctScore">-</h1>
+          <h1 class="score success correctScore" id="correctScore">-</h1>
           <div class="score hint">correct</div>
         </div>
         <div class="scoreDisplayBlock">
-          <h1 class="score danger" id="incorrectScore">-</h1>
+          <h1 class="score danger incorrectScore" id="incorrectScore">-</h1>
           <div class="score hint">incorrect</div>
         </div>
       </div>
       <div class="scoreDisplay abs-hcentered">
         <div class="scoreDisplayBlock">
-          <h1 class="score" id="flagCount">-</h1>
-          <div class="score hint">flags</div>
+          <h1 class="score flagCount" id="flagCount">-</h1>
+          <div class="score hint">guessed</div>
         </div>
       </div>
     </div>

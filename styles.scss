@@ -15,6 +15,14 @@ $color-disabled: #4a4c52;
   visibility: hidden;
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
 .hcentered {
   margin: auto;
   text-align: center;
@@ -256,6 +264,10 @@ h1.nav {
   &.danger {
     color: $color-danger;
   }
+
+  &#percentScore {
+    font-size: 4rem;
+  }
 }
 
 .toastContainer {
@@ -308,6 +320,10 @@ h1.nav {
 @media (width < 525px) {
   .score {
     font-size: 1.7rem;
+
+    &#percentScore {
+      font-size: 3rem;
+    }
   }
 
   button.control {

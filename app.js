@@ -19,23 +19,21 @@ const correct = [];
 const incorrect = [];
 
 // html elements
-// nav and settings
 const howToModal = document.getElementById("howToModal");
 const howToBtn = document.getElementById("howToBtn");
 const settingsModal = document.getElementById("settingsModal");
-const scoreText = document.getElementById("scoreText");
 const settingsBtn = document.getElementById("settingsBtn");
 const regionSettings = document.getElementById("regionSettings");
 const resetBtn = document.getElementById("resetBtn");
 const repeatBtn = document.getElementById("repeatBtn");
 const toast = document.getElementById("toast");
-// cards and controls
 const deck = document.getElementById("deck");
-const correctScore = document.getElementById("correctScore");
-const flagCount = document.getElementById("flagCount");
-const incorrectScore = document.getElementById("incorrectScore");
 const correctBtn = document.getElementById("correctBtn");
 const incorrectBtn = document.getElementById("incorrectBtn");
+const correctScore = document.getElementsByClassName("correctScore");
+const flagCount = document.getElementsByClassName("flagCount");
+const incorrectScore = document.getElementsByClassName("incorrectScore");
+const percentScore = document.getElementById("percentScore");
 
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -245,24 +243,26 @@ const getNextCard = (e) => {
 
 const updateScore = () => {
   // main score display
-  correctScore.innerHTML = `${correct.length}`;
-  flagCount.innerHTML = `${Math.min(
-    correct.length + incorrect.length + 1,
-    countries.length
-  )}/${countries.length}`;
-  incorrectScore.innerHTML = `${incorrect.length}`;
+  for (const score of correctScore) {
+    score.innerHTML = `${correct.length}`;
+  }
+  for (const count of flagCount) {
+    count.innerHTML = `${Math.min(
+      correct.length + incorrect.length,
+      countries.length
+    )}/${countries.length}`;
+  }
+  for (const score of incorrectScore) {
+    score.innerHTML = `${incorrect.length}`;
+  }
 
-  // settings score display
-  const percentScore =
+  const percent =
     correct.length + incorrect.length > 0
       ? ((correct.length / (correct.length + incorrect.length)) * 100).toFixed(
           2
         )
       : 0;
-  const score = `${correct.length}/${
-    correct.length + incorrect.length
-  } (${percentScore}%)`;
-  scoreText.innerHTML = `<h2>Score: ${score}</h2>`;
+  percentScore.innerHTML = `${percent}%`;
 };
 
 const reset = () => {
