@@ -1,7 +1,7 @@
 import countryData from "./countryData";
 const version = import.meta.env.VITE_REACT_APP_VERSION;
 
-let settings = {};
+let state = {};
 
 const allRegions = [
   "Africa",
@@ -14,9 +14,9 @@ const allRegions = [
 ];
 const allCountries = countryData;
 let countries;
-let current;
-const correct = [];
-const incorrect = [];
+let remaining = [];
+let correct = [];
+let incorrect = [];
 
 // html elements
 const howToModal = document.getElementById("howToModal");
@@ -24,6 +24,7 @@ const howToBtn = document.getElementById("howToBtn");
 const settingsModal = document.getElementById("settingsModal");
 const settingsBtn = document.getElementById("settingsBtn");
 const regionSettings = document.getElementById("regionSettings");
+const regionCheckboxes = [];
 const resetBtn = document.getElementById("resetBtn");
 const repeatBtn = document.getElementById("repeatBtn");
 const toast = document.getElementById("toast");
@@ -65,46 +66,58 @@ const slideCardRight = (card) => {
   card.classList.toggle("slide-right");
 };
 
-const initialize = () => {
+const initializeState = () => {
   localStorage.clear();
-  settings.version = version;
-  settings.regions = allRegions.slice(0);
-  saveSettings();
+  state.version = version;
+  state.settings = {};
+  state.settings.regions = allRegions.slice(0);
+  countries = allCountries.filter((country) =>
+    state.settings.regions.includes(country.region)
+  );
+  shuffle(countries);
+  saveState();
 };
 
-const saveSettings = () => {
-  localStorage.setItem("settings", JSON.stringify(settings));
+const saveState = () => {
+  state.game = {
+    countries: countries,
+    remaining: remaining,
+    correct: correct,
+    incorrect: incorrect,
+  };
+  state.settings.regions = allRegions.slice(0);
+  for (const regionCb of regionCheckboxes) {
+    if (!regionCb.checked) {
+      state.settings.regions.splice(
+        state.settings.regions.indexOf(regionCb.value),
+        1
+      );
+    }
+  }
+  localStorage.setItem("state", JSON.stringify(state));
 };
 
-const loadSettings = () => {
-  const lsSettings = JSON.parse(localStorage.getItem("settings"));
+const loadState = () => {
+  const lsState = JSON.parse(localStorage.getItem("state"));
   if (
-    lsSettings &&
-    lsSettings.version == version &&
-    lsSettings.regions.length > 0
+    lsState &&
+    lsState.version == version &&
+    lsState.settings.regions.length > 0
   ) {
-    settings = lsSettings;
+    state = lsState;
   } else {
-    initialize();
+    initializeState();
   }
 };
 
 const buildSettingsModal = () => {
-  updateScore();
   for (const region of allRegions) {
     const regionCb = document.createElement("input");
     regionCb.type = "checkbox";
     regionCb.name = region;
     regionCb.value = region;
-    regionCb.checked = settings.regions.includes(region);
-    regionCb.addEventListener("change", () => {
-      if (regionCb.checked) {
-        settings.regions.push(region);
-      } else {
-        settings.regions.splice(settings.regions.indexOf(region), 1);
-      }
-      saveSettings();
-    });
+    regionCb.checked = state.settings.regions.includes(region);
+    regionCheckboxes.push(regionCb);
     const regionLabel = document.createElement("label");
     const regionCount = allCountries.filter((country) => {
       return country.region == region;
@@ -152,6 +165,13 @@ const toggleShowSettings = (e) => {
   }
   if (e.target == settingsBtn || e.target == settingsModal) {
     toggleHidden(settingsModal);
+    for (const regionCb of regionCheckboxes) {
+      if (state.settings.regions.includes(regionCb.value)) {
+        regionCb.checked = true;
+      } else {
+        regionCb.checked = false;
+      }
+    }
   }
 };
 
@@ -190,33 +210,42 @@ const buildCard = (country, zIndex) => {
   return card;
 };
 
-const buildDeck = (repeatIncorrect = false) => {
-  if (!repeatIncorrect) {
+const buildDeck = (pageLoad = false, repeatIncorrect = false) => {
+  if (pageLoad && state.game.remaining.length > 0) {
+    // load from previous state
+    countries = state.game.countries;
+    remaining = state.game.remaining;
+    correct = state.game.correct;
+    incorrect = state.game.incorrect;
+  } else if (!repeatIncorrect) {
+    // create a fresh game from settings
     countries = allCountries.filter((country) =>
-      settings.regions.includes(country.region)
+      state.settings.regions.includes(country.region)
     );
+    shuffle(countries);
+    remaining = countries.slice(0);
+  } else {
+    // create a game from previous mistakes
+    countries = incorrect.slice(0);
+    correct.length = 0;
+    incorrect.length = 0;
+    shuffle(countries);
+    remaining = countries.slice(0);
   }
-  shuffle(countries);
-  for (let i = 0; i < countries.length; i++) {
-    const country = countries[i];
-    delete country.prev;
-    delete country.next;
-    if (i > 0) {
-      country.prev = countries[i - 1];
-      if (i < countries.length) {
-        countries[i - 1].next = country;
-      }
-    }
-    const card = buildCard(country, countries.length - i);
+
+  for (let i = 0; i < remaining.length; i++) {
+    const country = remaining[i];
+    const card = buildCard(country, remaining.length - i);
     country.card = card;
     deck.appendChild(card);
   }
 
-  current = countries[0];
-  toggleHidden(current.card);
+  toggleHidden(remaining[0].card);
+  saveState();
 };
 
 const getNextCard = (e) => {
+  const current = remaining[0];
   let left = true;
   if (e.srcElement == correctBtn) {
     correct.push(current);
@@ -225,23 +254,21 @@ const getNextCard = (e) => {
     left = false;
   }
 
-  if (current.next) {
-    current.next.card.style.visibility = "visible";
-    if (left) {
-      slideCardLeft(current.card);
-    } else {
-      slideCardRight(current.card);
-    }
-    current = current.next;
+  if (remaining.length > 1) {
+    remaining[1].card.style.visibility = "visible";
   } else {
-    if (left) {
-      slideCardLeft(current.card);
-    } else {
-      slideCardRight(current.card);
-    }
     toggleShowSettings({ target: settingsBtn });
   }
+
+  if (left) {
+    slideCardLeft(current.card);
+  } else {
+    slideCardRight(current.card);
+  }
+
+  remaining.shift();
   updateScore();
+  saveState();
 };
 
 const updateScore = () => {
@@ -269,13 +296,15 @@ const updateScore = () => {
 };
 
 const reset = () => {
-  if (settings.regions.length == 0) {
+  const checkedRegions = regionCheckboxes.filter((cb) => cb.checked);
+  if (checkedRegions.length == 0) {
     showToast("Please select at least one region to reset", "danger");
     return;
   }
   correct.length = 0;
   incorrect.length = 0;
   deck.replaceChildren();
+  saveState();
   buildDeck();
   updateScore();
   toggleShowSettings({ target: settingsBtn });
@@ -290,11 +319,8 @@ const repeat = () => {
     showToast("No incorrect flags to repeat - good job!", "success");
     return;
   }
-  countries = incorrect.slice(0);
-  correct.length = 0;
-  incorrect.length = 0;
   deck.replaceChildren();
-  buildDeck(true);
+  buildDeck(false, true);
   updateScore();
   toggleShowSettings({ target: settingsBtn });
 };
@@ -312,6 +338,7 @@ correctBtn.addEventListener("click", getNextCard);
 incorrectBtn.addEventListener("click", getNextCard);
 
 // start
-loadSettings();
-buildDeck();
+loadState();
 buildSettingsModal();
+buildDeck(true, false);
+updateScore();
