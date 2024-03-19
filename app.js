@@ -106,8 +106,11 @@ const buildSettingsModal = () => {
       saveSettings();
     });
     const regionLabel = document.createElement("label");
+    const regionCount = allCountries.filter((country) => {
+      return country.region == region;
+    }).length;
     regionLabel.setAttribute("for", region);
-    regionLabel.innerHTML = region;
+    regionLabel.innerHTML = `${region} (${regionCount} flags)`;
     regionLabel.addEventListener("click", () => {
       regionCb.click();
     });
