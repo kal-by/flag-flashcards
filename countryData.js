@@ -3263,7 +3263,7 @@ export default [
   },
   {
     countryNameEn: "Tajikistan",
-    countryNameLocal: ",",
+    countryNameLocal: "Ҷумҳурии Тоҷикистон,Jumhurii Tojikiston",
     countryCode: "TJ",
     currencyCode: "TJS",
     currencyNameEn: "Tajikistani somoni",
