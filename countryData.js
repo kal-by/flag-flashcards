@@ -450,7 +450,7 @@ export default [
     tinName: "",
     officialLanguageCode: "ms",
     officialLanguageNameEn: "Malay",
-    officialLanguageNameLocal: "Bahasa Melayu, بهاس ملايو‎",
+    officialLanguageNameLocal: "Bahasa Melayu, بهاس ملايو",
     countryCallingCode: "673",
     areaCodes: [],
     region: "Asia",
@@ -2297,7 +2297,8 @@ export default [
   },
   {
     countryNameEn: "Maldives",
-    countryNameLocal: "",
+    countryNameLocal:
+      "ދިވެހިރާއްޖޭގެ ޖުމްހޫރިއްޔާ, Dhivehi Raajjeyge Jumhooriyyaa",
     countryCode: "MV",
     currencyCode: "MVR",
     currencyNameEn: "Maldivian rufiyaa",
@@ -2348,7 +2349,7 @@ export default [
   },
   {
     countryNameEn: "Malaysia",
-    countryNameLocal: "",
+    countryNameLocal: "مليسيا",
     countryCode: "MY",
     currencyCode: "MYR",
     currencyNameEn: "Malaysian ringgit",
@@ -2356,7 +2357,7 @@ export default [
     tinName: "",
     officialLanguageCode: "ms",
     officialLanguageNameEn: "Malay",
-    officialLanguageNameLocal: "Bahasa Melayu, بهاس ملايو‎",
+    officialLanguageNameLocal: "Bahasa Melayu, بهاس ملايو",
     countryCallingCode: "60",
     areaCodes: [],
     region: "Asia",
@@ -2484,7 +2485,8 @@ export default [
   },
   {
     countryNameEn: "Nepal",
-    countryNameLocal: "",
+    countryNameLocal:
+      "सङ्घीय लोकतान्त्रिक गणतन्त्र नेपाल, Saṅghīya Lokatāntrika Gaṇatantra Nepāla",
     countryCode: "NP",
     currencyCode: "NPR",
     currencyNameEn: "Nepalese rupee",
@@ -3269,7 +3271,7 @@ export default [
     tinName: "",
     officialLanguageCode: "tg",
     officialLanguageNameEn: "Tajik",
-    officialLanguageNameLocal: "тоҷикӣ, toçikī, تاجیکی‎",
+    officialLanguageNameLocal: "тоҷикӣ, toçikī, تاجیکی",
     countryCallingCode: "992",
     areaCodes: [],
     region: "Asia",
@@ -3496,7 +3498,7 @@ export default [
   },
   {
     countryNameEn: "Uzbekistan",
-    countryNameLocal: "",
+    countryNameLocal: "O‘zbekiston Respublikasi, Ўзбекистон Республикаси",
     countryCode: "UZ",
     currencyCode: "UZS",
     currencyNameEn: "Uzbekistan som",
@@ -3504,7 +3506,7 @@ export default [
     tinName: "Солиқ тўловчиларнинг идентификация рақами",
     officialLanguageCode: "uz",
     officialLanguageNameEn: "Uzbek",
-    officialLanguageNameLocal: "Oʻzbek, Ўзбек, أۇزبېك‎",
+    officialLanguageNameLocal: "Oʻzbek, Ўзбек, أۇزبېك",
     countryCallingCode: "998",
     areaCodes: [],
     region: "Asia",
