@@ -32,6 +32,7 @@ const toast = document.getElementById("toast");
 // cards and controls
 const deck = document.getElementById("deck");
 const correctScore = document.getElementById("correctScore");
+const flagCount = document.getElementById("flagCount");
 const incorrectScore = document.getElementById("incorrectScore");
 const correctBtn = document.getElementById("correctBtn");
 const incorrectBtn = document.getElementById("incorrectBtn");
@@ -243,8 +244,15 @@ const getNextCard = (e) => {
 };
 
 const updateScore = () => {
+  // main score display
   correctScore.innerHTML = `${correct.length}`;
+  flagCount.innerHTML = `${Math.min(
+    correct.length + incorrect.length + 1,
+    countries.length
+  )}/${countries.length}`;
   incorrectScore.innerHTML = `${incorrect.length}`;
+
+  // settings score display
   const percentScore =
     correct.length + incorrect.length > 0
       ? ((correct.length / (correct.length + incorrect.length)) * 100).toFixed(
@@ -302,5 +310,5 @@ incorrectBtn.addEventListener("click", getNextCard);
 
 // start
 loadSettings();
-buildSettingsModal();
 buildDeck();
+buildSettingsModal();

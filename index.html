@@ -47,8 +47,10 @@
           <strong>Repeat incorrect</strong> to show only incorrect flags.
         </p>
         <div class="container">
-          <button class="danger" id="resetBtn">Reset</button>
-          <button class="success" id="repeatBtn">Repeat incorrect</button>
+          <button class="control danger" id="resetBtn">Reset</button>
+          <button class="control success" id="repeatBtn">
+            Repeat incorrect
+          </button>
         </div>
         <hr />
         <h2>Regions</h2>
@@ -64,15 +66,29 @@
       <button class="nav" id="settingsBtn">⋮</button>
     </div>
     <div class="container hcentered">
-      <div class="deck" id="deck"></div>
+      <div class="deck" id="deck"><div class="cardFront"></div></div>
     </div>
     <div class="container hcentered">
-      <button class="success" id="correctBtn">Correct</button>
-      <button class="danger" id="incorrectBtn">Incorrect</button>
+      <button class="control success" id="correctBtn">Correct</button>
+      <button class="control danger" id="incorrectBtn">Incorrect</button>
     </div>
     <div class="container hcentered">
-      <h1 class="score success" id="correctScore"></h1>
-      <h1 class="score danger" id="incorrectScore"></h1>
+      <div class="scoreDisplay">
+        <div class="scoreDisplayBlock">
+          <h1 class="score success" id="correctScore">-</h1>
+          <div class="score hint">correct</div>
+        </div>
+        <div class="scoreDisplayBlock">
+          <h1 class="score danger" id="incorrectScore">-</h1>
+          <div class="score hint">incorrect</div>
+        </div>
+      </div>
+      <div class="scoreDisplay abs-hcentered">
+        <div class="scoreDisplayBlock">
+          <h1 class="score" id="flagCount">-</h1>
+          <div class="score hint">flags</div>
+        </div>
+      </div>
     </div>
     <div class="toastContainer">
       <div class="toast" id="toast"></div>
