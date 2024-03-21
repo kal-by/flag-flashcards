@@ -120,8 +120,10 @@ button {
     width: 4rem;
     height: 4rem;
 
-    &:hover {
-      background-color: scale-color($color: $color-bg-card, $lightness: -15%);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: scale-color($color: $color-bg-card, $lightness: -15%);
+      }
     }
 
     &:active {
@@ -139,8 +141,13 @@ button {
     &.success {
       background-color: $color-success;
 
-      &:hover {
-        background-color: scale-color($color: $color-success, $lightness: -15%);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: scale-color(
+            $color: $color-success,
+            $lightness: -15%
+          );
+        }
       }
 
       &:active {
@@ -155,8 +162,13 @@ button {
     &.danger {
       background-color: $color-danger;
 
-      &:hover {
-        background-color: scale-color($color: $color-danger, $lightness: -15%);
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: scale-color(
+            $color: $color-danger,
+            $lightness: -15%
+          );
+        }
       }
 
       &:active {
