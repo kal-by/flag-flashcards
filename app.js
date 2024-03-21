@@ -195,8 +195,10 @@ const buildCard = (country, zIndex) => {
   countryNameEn.innerText = `${country.countryNameEn}`;
   const countryNameLocal = document.createElement("h2");
   countryNameLocal.innerText = `${country.countryNameLocal}`;
-  const countryCallingCode = document.createElement("h2");
-  countryCallingCode.innerText = `(${country.countryCallingCode})`;
+  const countryCallingCode = document.createElement("h3");
+  countryCallingCode.innerText = `.${country.countryCode.toLowerCase()}, ${
+    country.countryCallingCode
+  }`;
   backDisplay.appendChild(countryNameEn);
   backDisplay.appendChild(countryNameLocal);
   backDisplay.appendChild(countryCallingCode);
