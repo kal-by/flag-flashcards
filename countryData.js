@@ -14,7 +14,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇦🇩",
-    touch: true,
   },
   {
     countryNameEn: "Afghanistan",
@@ -32,7 +31,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇦🇫",
-    touch: true,
   },
   {
     countryNameEn: "Antigua and Barbuda",
@@ -49,7 +47,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇦🇬",
-    touch: true,
   },
   {
     countryNameEn: "Anguilla",
@@ -66,7 +63,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇦🇮",
-    touch: true,
   },
   {
     countryNameEn: "Albania",
@@ -83,7 +79,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇦🇱",
-    touch: true,
   },
   {
     countryNameEn: "Armenia",
@@ -100,7 +95,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇦🇲",
-    touch: true,
   },
   {
     countryNameEn: "Angola",
@@ -117,7 +111,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇦🇴",
-    touch: true,
   },
   {
     countryNameEn: "Antarctica",
@@ -134,7 +127,6 @@ export default [
     areaCodes: [],
     region: "Antarctica",
     flag: "🇦🇶",
-    touch: true,
   },
   {
     countryNameEn: "Argentina",
@@ -151,7 +143,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇦🇷",
-    touch: true,
   },
   {
     countryNameEn: "American Samoa",
@@ -168,7 +159,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇦🇸",
-    touch: true,
   },
   {
     countryNameEn: "Austria",
@@ -185,7 +175,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇦🇹",
-    touch: true,
   },
   {
     countryNameEn: "Australia",
@@ -202,7 +191,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇦🇺",
-    touch: true,
   },
   {
     countryNameEn: "Aruba",
@@ -219,7 +207,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇦🇼",
-    touch: true,
   },
   {
     countryNameEn: "Åland Islands",
@@ -252,7 +239,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇦🇿",
-    touch: true,
   },
   {
     countryNameEn: "Bosnia and Herzegovina",
@@ -269,7 +255,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇧🇦",
-    touch: true,
   },
   {
     countryNameEn: "Barbados",
@@ -286,7 +271,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇧🇧",
-    touch: true,
   },
   {
     countryNameEn: "Bangladesh",
@@ -303,7 +287,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇧🇩",
-    touch: true,
   },
   {
     countryNameEn: "Belgium",
@@ -320,7 +303,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇧🇪",
-    touch: true,
   },
   {
     countryNameEn: "Burkina Faso",
@@ -337,7 +319,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇧🇫",
-    touch: true,
   },
   {
     countryNameEn: "Bulgaria",
@@ -354,7 +335,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇧🇬",
-    touch: true,
   },
   {
     countryNameEn: "Bahrain",
@@ -371,7 +351,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇧🇭",
-    touch: true,
   },
   {
     countryNameEn: "Burundi",
@@ -388,7 +367,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇧🇮",
-    touch: true,
   },
   {
     countryNameEn: "Benin",
@@ -405,7 +383,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇧🇯",
-    touch: true,
   },
   {
     countryNameEn: "Saint Barthélemy",
@@ -438,7 +415,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: " 🇧🇲",
-    touch: true,
   },
   {
     countryNameEn: "Brunei Darussalam",
@@ -503,7 +479,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇧🇷",
-    touch: true,
   },
   {
     countryNameEn: "Bhutan",
@@ -520,7 +495,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇧🇹",
-    touch: true,
   },
   {
     countryNameEn: "Bouvet Island",
@@ -537,7 +511,6 @@ export default [
     areaCodes: [],
     region: "Antarctica",
     flag: "🇧🇻",
-    touch: true,
   },
   {
     countryNameEn: "Botswana",
@@ -554,7 +527,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇧🇼",
-    touch: true,
   },
   {
     countryNameEn: "Belarus",
@@ -571,7 +543,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇧🇾",
-    touch: true,
   },
   {
     countryNameEn: "Belize",
@@ -588,7 +559,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇧🇿",
-    touch: true,
   },
   {
     countryNameEn: "Canada",
@@ -647,7 +617,6 @@ export default [
     ],
     region: "North America",
     flag: "🇨🇦",
-    touch: true,
   },
   {
     countryNameEn: "Switzerland",
@@ -664,7 +633,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇨🇭",
-    touch: true,
   },
   {
     countryNameEn: "Côte d'Ivoire",
@@ -697,7 +665,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇨🇱",
-    touch: true,
   },
   {
     countryNameEn: "Cameroon",
@@ -714,7 +681,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇨🇲",
-    touch: true,
   },
   {
     countryNameEn: "China",
@@ -731,7 +697,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇨🇳",
-    touch: true,
   },
   {
     countryNameEn: "Colombia",
@@ -748,7 +713,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇨🇴",
-    touch: true,
   },
   {
     countryNameEn: "Costa Rica",
@@ -765,7 +729,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇨🇷",
-    touch: true,
   },
   {
     countryNameEn: "Cuba",
@@ -782,7 +745,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇨🇺",
-    touch: true,
   },
   {
     countryNameEn: "Cabo Verde",
@@ -831,7 +793,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇨🇽",
-    touch: true,
   },
   {
     countryNameEn: "Cyprus",
@@ -848,7 +809,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇨🇾",
-    touch: true,
   },
   {
     countryNameEn: "Germany",
@@ -865,7 +825,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇩🇪",
-    touch: true,
   },
   {
     countryNameEn: "Djibouti",
@@ -882,7 +841,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇩 🇯",
-    touch: true,
   },
   {
     countryNameEn: "Denmark",
@@ -899,7 +857,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇩🇰",
-    touch: true,
   },
   {
     countryNameEn: "Dominica",
@@ -916,7 +873,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇩🇲",
-    touch: true,
   },
   {
     countryNameEn: "Algeria",
@@ -933,7 +889,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇩🇿",
-    touch: true,
   },
   {
     countryNameEn: "Ecuador",
@@ -950,7 +905,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇪🇨",
-    touch: true,
   },
   {
     countryNameEn: "Estonia",
@@ -967,7 +921,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇪🇪",
-    touch: true,
   },
   {
     countryNameEn: "Egypt",
@@ -984,7 +937,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇪🇬",
-    touch: true,
   },
   {
     countryNameEn: "Western Sahara",
@@ -1001,7 +953,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇪🇭",
-    touch: true,
   },
   {
     countryNameEn: "Eritrea",
@@ -1018,7 +969,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇪🇷",
-    touch: true,
   },
   {
     countryNameEn: "Spain",
@@ -1036,7 +986,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇪🇸",
-    touch: true,
   },
   {
     countryNameEn: "Ethiopia",
@@ -1053,7 +1002,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇪🇹",
-    touch: true,
   },
   {
     countryNameEn: "Finland",
@@ -1070,7 +1018,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇫🇮",
-    touch: true,
   },
   {
     countryNameEn: "Fiji",
@@ -1087,7 +1034,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇫🇯",
-    touch: true,
   },
   {
     countryNameEn: "Micronesia (Federated States of)",
@@ -1121,7 +1067,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇫🇷",
-    touch: true,
   },
   {
     countryNameEn: "Gabon",
@@ -1138,7 +1083,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇬🇦",
-    touch: true,
   },
   {
     countryNameEn: "Grenada",
@@ -1155,7 +1099,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇬🇩",
-    touch: true,
   },
   {
     countryNameEn: "Georgia",
@@ -1172,7 +1115,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇬🇪",
-    touch: true,
   },
   {
     countryNameEn: "French Guiana",
@@ -1189,7 +1131,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇬🇫",
-    touch: true,
   },
   {
     countryNameEn: "Guernsey",
@@ -1206,7 +1147,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇬🇬",
-    touch: true,
   },
   {
     countryNameEn: "Ghana",
@@ -1223,7 +1163,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇬🇭",
-    touch: true,
   },
   {
     countryNameEn: "Gibraltar",
@@ -1240,7 +1179,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇬🇮",
-    touch: true,
   },
   {
     countryNameEn: "Greenland",
@@ -1257,7 +1195,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇬🇱",
-    touch: true,
   },
   {
     countryNameEn: "Guinea",
@@ -1274,7 +1211,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇬🇳",
-    touch: true,
   },
   {
     countryNameEn: "Guadeloupe",
@@ -1291,7 +1227,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇬🇵",
-    touch: true,
   },
   {
     countryNameEn: "Equatorial Guinea",
@@ -1308,7 +1243,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇬🇶",
-    touch: true,
   },
   {
     countryNameEn: "Greece",
@@ -1325,7 +1259,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇬🇷",
-    touch: true,
   },
   {
     countryNameEn: "South Georgia and the South Sandwich Islands",
@@ -1342,7 +1275,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇬🇸",
-    touch: true,
   },
   {
     countryNameEn: "Guatemala",
@@ -1359,7 +1291,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇬🇹",
-    touch: true,
   },
   {
     countryNameEn: "Guam",
@@ -1376,7 +1307,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇬🇺",
-    touch: true,
   },
   {
     countryNameEn: "Guinea-Bissau",
@@ -1393,7 +1323,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇬🇼",
-    touch: true,
   },
   {
     countryNameEn: "Guyana",
@@ -1410,7 +1339,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇬🇾",
-    touch: true,
   },
   {
     countryNameEn: "Hong Kong",
@@ -1427,7 +1355,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇭🇰",
-    touch: true,
   },
   {
     countryNameEn: "Honduras",
@@ -1444,7 +1371,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇭🇳",
-    touch: true,
   },
   {
     countryNameEn: "Croatia",
@@ -1461,7 +1387,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: " 🇭🇷",
-    touch: true,
   },
   {
     countryNameEn: "Haiti",
@@ -1478,7 +1403,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇭🇹",
-    touch: true,
   },
   {
     countryNameEn: "Hungary",
@@ -1495,7 +1419,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇭🇺",
-    touch: true,
   },
   {
     countryNameEn: "Indonesia",
@@ -1512,7 +1435,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇮🇩",
-    touch: true,
   },
   {
     countryNameEn: "Ireland",
@@ -1529,7 +1451,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇮🇪",
-    touch: true,
   },
   {
     countryNameEn: "Israel",
@@ -1546,7 +1467,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇮🇱",
-    touch: true,
   },
   {
     countryNameEn: "Isle of Man",
@@ -1563,7 +1483,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇮🇲",
-    touch: true,
   },
   {
     countryNameEn: "India",
@@ -1581,7 +1500,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇮🇳",
-    touch: true,
   },
   {
     countryNameEn: "British Indian Ocean Territories",
@@ -1614,7 +1532,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇮🇶",
-    touch: true,
   },
   {
     countryNameEn: "Iran (Islamic Republic of)",
@@ -1647,7 +1564,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇮🇸",
-    touch: true,
   },
   {
     countryNameEn: "Italy",
@@ -1664,7 +1580,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇮🇹",
-    touch: true,
   },
   {
     countryNameEn: "Jersey",
@@ -1681,7 +1596,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇯🇪",
-    touch: true,
   },
   {
     countryNameEn: "Jamaica",
@@ -1698,7 +1612,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇯🇲",
-    touch: true,
   },
   {
     countryNameEn: "Jordan",
@@ -1715,7 +1628,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇯🇴",
-    touch: true,
   },
   {
     countryNameEn: "Japan",
@@ -1732,7 +1644,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇯🇵",
-    touch: true,
   },
   {
     countryNameEn: "Kenya",
@@ -1749,7 +1660,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇰🇪",
-    touch: true,
   },
   {
     countryNameEn: "Kyrgyzstan",
@@ -1766,7 +1676,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇰🇬",
-    touch: true,
   },
   {
     countryNameEn: "Cambodia",
@@ -1783,7 +1692,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇰🇭",
-    touch: true,
   },
   {
     countryNameEn: "North Korea",
@@ -1800,7 +1708,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇰🇵",
-    touch: true,
   },
   {
     countryNameEn: "South Korea",
@@ -1817,7 +1724,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇰🇷",
-    touch: true,
   },
   {
     countryNameEn: "Kiribati",
@@ -1834,7 +1740,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇰🇮",
-    touch: true,
   },
   {
     countryNameEn: "Saint Kitts and Nevis",
@@ -1851,7 +1756,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇰🇳",
-    touch: true,
   },
   {
     countryNameEn: "Kuwait",
@@ -1868,7 +1772,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇰🇼",
-    touch: true,
   },
   {
     countryNameEn: "Kazakhstan",
@@ -1885,7 +1788,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇰🇿",
-    touch: true,
   },
   {
     countryNameEn: "Lebanon",
@@ -1902,7 +1804,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇱🇧",
-    touch: true,
   },
   {
     countryNameEn: "Saint Lucia",
@@ -1919,7 +1820,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇱🇨",
-    touch: true,
   },
   {
     countryNameEn: "Liechtenstein",
@@ -1936,7 +1836,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇱🇮",
-    touch: true,
   },
   {
     countryNameEn: "Sri Lanka",
@@ -1953,7 +1852,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇱🇰",
-    touch: true,
   },
   {
     countryNameEn: "Liberia",
@@ -1970,7 +1868,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇱🇷",
-    touch: true,
   },
   {
     countryNameEn: "Lesotho",
@@ -1987,7 +1884,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇱🇸",
-    touch: true,
   },
   {
     countryNameEn: "Lithuania",
@@ -2004,7 +1900,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇱🇹",
-    touch: true,
   },
   {
     countryNameEn: "Luxembourg",
@@ -2021,7 +1916,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇱🇺",
-    touch: true,
   },
   {
     countryNameEn: "Latvia",
@@ -2038,7 +1932,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇱🇻",
-    touch: true,
   },
   {
     countryNameEn: "Libya",
@@ -2055,7 +1948,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇱🇾",
-    touch: true,
   },
   {
     countryNameEn: "Morocco",
@@ -2072,7 +1964,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇲🇦",
-    touch: true,
   },
   {
     countryNameEn: "Monaco",
@@ -2089,7 +1980,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇲🇨",
-    touch: true,
   },
   {
     countryNameEn: "Montenegro",
@@ -2106,7 +1996,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇲🇪",
-    touch: true,
   },
   {
     countryNameEn: "Saint Martin (French part)",
@@ -2123,7 +2012,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇲🇫",
-    touch: true,
   },
   {
     countryNameEn: "Madagascar",
@@ -2140,7 +2028,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇲🇬",
-    touch: true,
   },
   {
     countryNameEn: "Mali",
@@ -2157,7 +2044,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇲🇱",
-    touch: true,
   },
   {
     countryNameEn: "Myanmar",
@@ -2174,7 +2060,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇲🇲",
-    touch: true,
   },
   {
     countryNameEn: "Mongolia",
@@ -2191,7 +2076,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇲🇳",
-    touch: true,
   },
   {
     countryNameEn: "Macao",
@@ -2208,7 +2092,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇲🇴",
-    touch: true,
   },
   {
     countryNameEn: "Martinique",
@@ -2225,7 +2108,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇲🇶",
-    touch: true,
   },
   {
     countryNameEn: "Mauritania",
@@ -2242,7 +2124,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: " 🇲🇷",
-    touch: true,
   },
   {
     countryNameEn: "Montserrat",
@@ -2259,7 +2140,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇲🇸",
-    touch: true,
   },
   {
     countryNameEn: "Malta",
@@ -2276,7 +2156,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇲🇹",
-    touch: true,
   },
   {
     countryNameEn: "Mauritius",
@@ -2293,7 +2172,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇲🇺",
-    touch: true,
   },
   {
     countryNameEn: "Maldives",
@@ -2311,7 +2189,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇲🇻",
-    touch: true,
   },
   {
     countryNameEn: "Malawi",
@@ -2328,7 +2205,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇲🇼",
-    touch: true,
   },
   {
     countryNameEn: "Mexico",
@@ -2345,7 +2221,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇲🇽",
-    touch: true,
   },
   {
     countryNameEn: "Malaysia",
@@ -2362,7 +2237,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇲🇾",
-    touch: true,
   },
   {
     countryNameEn: "Mozambique",
@@ -2379,7 +2253,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇲🇿",
-    touch: true,
   },
   {
     countryNameEn: "Namibia",
@@ -2396,7 +2269,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: " 🇳🇦",
-    touch: true,
   },
   {
     countryNameEn: "New Caledonia",
@@ -2413,7 +2285,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇳🇨",
-    touch: true,
   },
   {
     countryNameEn: "Norfolk Island",
@@ -2430,7 +2301,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇳🇫",
-    touch: true,
   },
   {
     countryNameEn: "Nigeria",
@@ -2447,7 +2317,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇳🇬",
-    touch: true,
   },
   {
     countryNameEn: "Nicaragua",
@@ -2464,7 +2333,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇳🇮",
-    touch: true,
   },
   {
     countryNameEn: "Norway",
@@ -2481,7 +2349,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇳🇴",
-    touch: true,
   },
   {
     countryNameEn: "Nepal",
@@ -2499,7 +2366,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇳🇵",
-    touch: true,
   },
   {
     countryNameEn: "Nauru",
@@ -2516,7 +2382,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇳🇷",
-    touch: true,
   },
   {
     countryNameEn: "Niue",
@@ -2533,7 +2398,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇳🇺",
-    touch: true,
   },
   {
     countryNameEn: "New Zealand",
@@ -2550,7 +2414,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇳🇿",
-    touch: true,
   },
   {
     countryNameEn: "Oman",
@@ -2567,7 +2430,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇴🇲",
-    touch: true,
   },
   {
     countryNameEn: "Panama",
@@ -2584,7 +2446,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇵🇦",
-    touch: true,
   },
   {
     countryNameEn: "Peru",
@@ -2601,7 +2462,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇵🇪",
-    touch: true,
   },
   {
     countryNameEn: "French Polynesia",
@@ -2618,7 +2478,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇵🇫",
-    touch: true,
   },
   {
     countryNameEn: "Papua New Guinea",
@@ -2635,7 +2494,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: " 🇵🇬",
-    touch: true,
   },
   {
     countryNameEn: "Pakistan",
@@ -2652,7 +2510,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇵🇰",
-    touch: true,
   },
   {
     countryNameEn: "Poland",
@@ -2669,7 +2526,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇵🇱",
-    touch: true,
   },
   {
     countryNameEn: "Saint Pierre and Miquelon",
@@ -2686,7 +2542,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇵🇲",
-    touch: true,
   },
   {
     countryNameEn: "Pitcairn",
@@ -2703,7 +2558,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇵🇳",
-    touch: true,
   },
   {
     countryNameEn: "Puerto Rico",
@@ -2720,7 +2574,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇵 🇷",
-    touch: true,
   },
   {
     countryNameEn: "Palestine, State of",
@@ -2753,7 +2606,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇵🇹",
-    touch: true,
   },
   {
     countryNameEn: "Palau",
@@ -2770,7 +2622,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇵🇼",
-    touch: true,
   },
   {
     countryNameEn: "Paraguay",
@@ -2787,7 +2638,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇵🇾",
-    touch: true,
   },
   {
     countryNameEn: "Qatar",
@@ -2804,7 +2654,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇶🇦",
-    touch: true,
   },
   {
     countryNameEn: "Réunion",
@@ -2837,7 +2686,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇷🇴",
-    touch: true,
   },
   {
     countryNameEn: "Serbia",
@@ -2854,7 +2702,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇷🇸",
-    touch: true,
   },
   {
     countryNameEn: "Russia",
@@ -2871,7 +2718,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇷🇺",
-    touch: true,
   },
   {
     countryNameEn: "Rwanda",
@@ -2888,7 +2734,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇷🇼",
-    touch: true,
   },
   {
     countryNameEn: "Saudi Arabia",
@@ -2905,7 +2750,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇸🇦",
-    touch: true,
   },
   {
     countryNameEn: "Solomon Islands",
@@ -2922,7 +2766,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇸🇧",
-    touch: true,
   },
   {
     countryNameEn: "Seychelles",
@@ -2939,7 +2782,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇨",
-    touch: true,
   },
   {
     countryNameEn: "Sweden",
@@ -2956,7 +2798,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇸🇪",
-    touch: true,
   },
   {
     countryNameEn: "Singapore",
@@ -2973,7 +2814,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇸🇬",
-    touch: true,
   },
   {
     countryNameEn: "Saint Helena, Ascension and Tristan da Cunha",
@@ -3006,7 +2846,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇸🇮",
-    touch: true,
   },
   {
     countryNameEn: "Svalbard and Jan Mayen",
@@ -3023,7 +2862,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇸🇯",
-    touch: true,
   },
   {
     countryNameEn: "Slovakia",
@@ -3040,7 +2878,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇸🇰",
-    touch: true,
   },
   {
     countryNameEn: "Sierra Leone",
@@ -3057,7 +2894,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇱",
-    touch: true,
   },
   {
     countryNameEn: "Republic of San Marino",
@@ -3090,7 +2926,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇳",
-    touch: true,
   },
   {
     countryNameEn: "Somalia",
@@ -3107,7 +2942,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇴",
-    touch: true,
   },
   {
     countryNameEn: "Suriname",
@@ -3124,7 +2958,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇸🇷",
-    touch: true,
   },
   {
     countryNameEn: "South Sudan",
@@ -3141,7 +2974,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇸",
-    touch: true,
   },
   {
     countryNameEn: "Sao Tome and Principe",
@@ -3158,7 +2990,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇹",
-    touch: true,
   },
   {
     countryNameEn: "El Salvador",
@@ -3175,7 +3006,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇸🇻",
-    touch: true,
   },
   {
     countryNameEn: "Sint Maarten (Dutch part)",
@@ -3192,7 +3022,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇸🇽",
-    touch: true,
   },
   {
     countryNameEn: "Syrian Arab Republic",
@@ -3225,7 +3054,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇹🇩",
-    touch: true,
   },
   {
     countryNameEn: "Togo",
@@ -3242,7 +3070,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇹🇬",
-    touch: true,
   },
   {
     countryNameEn: "Thailand",
@@ -3259,7 +3086,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇹🇭",
-    touch: true,
   },
   {
     countryNameEn: "Tajikistan",
@@ -3276,7 +3102,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇹🇯",
-    touch: true,
   },
   {
     countryNameEn: "Tokelau",
@@ -3293,7 +3118,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇹🇰",
-    touch: true,
   },
   {
     countryNameEn: "Timor-Leste",
@@ -3326,7 +3150,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇹🇲",
-    touch: true,
   },
   {
     countryNameEn: "Tunisia",
@@ -3343,7 +3166,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇹🇳",
-    touch: true,
   },
   {
     countryNameEn: "Tonga",
@@ -3360,7 +3182,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇹🇴",
-    touch: true,
   },
   {
     countryNameEn: "Turkey",
@@ -3377,7 +3198,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇹🇷",
-    touch: true,
   },
   {
     countryNameEn: "Trinidad and Tobago",
@@ -3394,7 +3214,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇹🇹",
-    touch: true,
   },
   {
     countryNameEn: "Tuvalu",
@@ -3411,7 +3230,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇹🇻",
-    touch: true,
   },
   {
     countryNameEn: "United Republic of Tanzania",
@@ -3444,7 +3262,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇺🇦",
-    touch: true,
   },
   {
     countryNameEn: "Uganda",
@@ -3461,7 +3278,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇺🇬",
-    touch: true,
   },
   {
     countryNameEn: "United States of America",
@@ -3494,7 +3310,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇺🇾",
-    touch: true,
   },
   {
     countryNameEn: "Uzbekistan",
@@ -3511,7 +3326,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇺🇿",
-    touch: true,
   },
   {
     countryNameEn: "Saint Vincent and the Grenadines",
@@ -3528,7 +3342,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇻🇨",
-    touch: true,
   },
   {
     countryNameEn: "Venezuela (Bolivarian Republic of)",
@@ -3593,7 +3406,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇻🇳",
-    touch: true,
   },
   {
     countryNameEn: "Vanuatu",
@@ -3610,7 +3422,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇻🇺",
-    touch: true,
   },
   {
     countryNameEn: "Wallis and Futuna",
@@ -3627,7 +3438,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇼🇫",
-    touch: true,
   },
   {
     countryNameEn: "Samoa",
@@ -3644,7 +3454,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇼🇸",
-    touch: true,
   },
   {
     countryNameEn: "Yemen",
@@ -3661,7 +3470,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇾🇪",
-    touch: true,
   },
   {
     countryNameEn: "Mayotte",
@@ -3678,7 +3486,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇾🇹",
-    touch: true,
   },
   {
     countryNameEn: "South Africa",
@@ -3695,7 +3502,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇿🇦",
-    touch: true,
   },
   {
     countryNameEn: "Zambia",
@@ -3712,7 +3518,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇿🇲",
-    touch: true,
   },
   {
     countryNameEn: "Zimbabwe",
@@ -3729,7 +3534,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇿🇼",
-    touch: true,
   },
   {
     countryNameEn: "Eswatini",
@@ -3746,7 +3550,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇿",
-    touch: true,
   },
   {
     countryNameEn: "North Macedonia",
@@ -3763,7 +3566,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇲🇰",
-    touch: true,
   },
   {
     countryNameEn: "Philippines",
@@ -3780,7 +3582,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇵🇭",
-    touch: true,
   },
   {
     countryNameEn: "Netherlands",
@@ -3797,7 +3598,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇳🇱",
-    touch: true,
   },
   {
     countryNameEn: "United Arab Emirates",
@@ -3814,7 +3614,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇦🇪",
-    touch: true,
   },
   {
     countryNameEn: "Republic of Moldova",
@@ -3847,7 +3646,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇬🇲",
-    touch: true,
   },
   {
     countryNameEn: "Dominican Republic",
@@ -3864,7 +3662,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇩🇴",
-    touch: true,
   },
   {
     countryNameEn: "Sudan",
@@ -3881,7 +3678,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇩",
-    touch: true,
   },
   {
     countryNameEn: "Lao People's Democratic Republic",
@@ -3914,7 +3710,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇹🇼",
-    touch: true,
   },
   {
     countryNameEn: "Republic of the Congo",
@@ -3947,7 +3742,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇨🇿",
-    touch: true,
   },
   {
     countryNameEn: "United Kingdom",
@@ -3964,7 +3758,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇬🇧",
-    touch: true,
   },
   {
     countryNameEn: "Niger",
@@ -3981,7 +3774,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇳🇪",
-    touch: true,
   },
   {
     countryNameEn: "Democratic Republic of the Congo",
@@ -4046,7 +3838,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇨🇫",
-    touch: true,
   },
   {
     countryNameEn: "Cook Islands",
@@ -4063,7 +3854,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇨🇰",
-    touch: true,
   },
   {
     countryNameEn: "Falkland Islands",
@@ -4080,7 +3870,6 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇫🇰",
-    touch: true,
   },
   {
     countryNameEn: "Faroe Islands",
@@ -4097,7 +3886,6 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇫🇴",
-    touch: true,
   },
   {
     countryNameEn: "Territory of Heard Island and McDonald Islands",
@@ -4130,7 +3918,6 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇮🇴",
-    touch: true,
   },
   {
     countryNameEn: "Comoros",
@@ -4147,7 +3934,6 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇰🇲",
-    touch: true,
   },
   {
     countryNameEn: "Cayman Islands",
@@ -4164,7 +3950,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇰🇾",
-    touch: true,
   },
   {
     countryNameEn: "Republic of the Marshall Islands",
@@ -4213,7 +3998,6 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇹🇨",
-    touch: true,
   },
   {
     countryNameEn: "French Southern and Antarctic Lands",
@@ -4246,7 +4030,6 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇺🇲",
-    touch: true,
   },
   {
     countryNameEn: "Vatican City",
