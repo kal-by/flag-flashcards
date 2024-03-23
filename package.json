@@ -7,7 +7,7 @@
     "start": "vite",
     "host": "vite --host",
     "build": "vite build",
-    "preview": "vite build && vite preview"
+    "preview": "vite build && vite preview --host"
   },
   "devDependencies": {
     "sass": "^1.71.1",
