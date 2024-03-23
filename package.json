@@ -5,6 +5,7 @@
   "author": "David Himelick",
   "scripts": {
     "start": "vite",
+    "host": "vite --host",
     "build": "vite build",
     "preview": "vite build && vite preview"
   },
