@@ -191,13 +191,13 @@ h1.nav {
 .deck {
   width: 100%;
   min-width: 250px;
-  padding-bottom: 75%;
+  padding-bottom: calc(200% / 3);
   position: relative;
   border-radius: $boder-radius;
 }
 
 .card {
-  padding-bottom: 75%;
+  padding-bottom: calc(200% / 3);
   border-radius: $boder-radius;
   position: absolute;
   width: 100%;
@@ -225,8 +225,10 @@ h1.nav {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: transform 0.5s ease;
   position: absolute;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .cardFront {
