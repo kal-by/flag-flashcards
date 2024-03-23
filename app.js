@@ -1,8 +1,7 @@
 import countryData from "./countryData";
+
+// constants
 const version = import.meta.env.VITE_REACT_APP_VERSION;
-
-let state = {};
-
 const allRegions = [
   "Africa",
   "Antarctica",
@@ -13,6 +12,9 @@ const allRegions = [
   "South America",
 ];
 const allCountries = countryData;
+
+// game state variables
+let state = {};
 let countries;
 let remaining = [];
 let correct = [];
@@ -36,6 +38,7 @@ const flagCount = document.getElementsByClassName("flagCount");
 const incorrectScore = document.getElementsByClassName("incorrectScore");
 const percentScore = document.getElementById("percentScore");
 
+// helpers
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -66,57 +69,13 @@ const slideCardRight = (card) => {
   card.classList.toggle("slide-right");
 };
 
-const initializeState = () => {
-  localStorage.clear();
-  state.version = version;
-  state.settings = {};
-  state.settings.regions = allRegions.slice(0);
-  countries = allCountries.filter((country) =>
-    state.settings.regions.includes(country.region)
-  );
-  shuffle(countries);
-  saveState();
-};
-
-const saveState = () => {
-  state.game = {
-    countries: countries,
-    remaining: remaining,
-    correct: correct,
-    incorrect: incorrect,
-  };
-  state.settings.regions = allRegions.slice(0);
-  for (const regionCb of regionCheckboxes) {
-    if (!regionCb.checked) {
-      state.settings.regions.splice(
-        state.settings.regions.indexOf(regionCb.value),
-        1
-      );
-    }
-  }
-  localStorage.setItem("state", JSON.stringify(state));
-};
-
-const loadState = () => {
-  const lsState = JSON.parse(localStorage.getItem("state"));
-  if (
-    lsState &&
-    lsState.version == version &&
-    lsState.settings.regions.length > 0
-  ) {
-    state = lsState;
-  } else {
-    initializeState();
-  }
-};
-
+// dynamic interface elements (other than deck)
 const buildSettingsModal = () => {
   for (const region of allRegions) {
     const regionCb = document.createElement("input");
     regionCb.type = "checkbox";
     regionCb.name = region;
     regionCb.value = region;
-    regionCb.checked = state.settings.regions.includes(region);
     regionCheckboxes.push(regionCb);
     const regionLabel = document.createElement("label");
     const regionCount = allCountries.filter((country) => {
@@ -133,6 +92,55 @@ const buildSettingsModal = () => {
   }
 };
 
+// state handling
+const initializeState = () => {
+  localStorage.clear();
+  state.version = version;
+  state.settings = {};
+  state.settings.regions = allRegions.slice(0);
+  for (const regionCb of regionCheckboxes) {
+    regionCb.checked = true;
+  }
+  countries = allCountries.filter((country) =>
+    state.settings.regions.includes(country.region)
+  );
+  shuffle(countries);
+  localStorage.setItem("state", JSON.stringify(state));
+};
+
+const loadState = () => {
+  const lsState = JSON.parse(localStorage.getItem("state"));
+  if (
+    lsState &&
+    lsState.version == version &&
+    lsState.settings.regions.length > 0
+  ) {
+    state = lsState;
+    for (const regionCb of regionCheckboxes) {
+      regionCb.checked = state.settings.regions.includes(regionCb.value);
+    }
+  } else {
+    initializeState();
+  }
+};
+
+const saveState = () => {
+  state.game = {
+    countries: countries,
+    remaining: remaining,
+    correct: correct,
+    incorrect: incorrect,
+  };
+  state.settings.regions = [];
+  for (const regionCb of regionCheckboxes) {
+    if (regionCb.checked) {
+      state.settings.regions.push(regionCb.value);
+    }
+  }
+  localStorage.setItem("state", JSON.stringify(state));
+};
+
+// modal/toast handling
 const showToast = (message, type) => {
   if (toast.style.animationPlayState == "running") {
     return;
@@ -166,15 +174,12 @@ const toggleShowSettings = (e) => {
   if (e.target == settingsBtn || e.target == settingsModal) {
     toggleHidden(settingsModal);
     for (const regionCb of regionCheckboxes) {
-      if (state.settings.regions.includes(regionCb.value)) {
-        regionCb.checked = true;
-      } else {
-        regionCb.checked = false;
-      }
+      regionCb.checked = state.settings.regions.includes(regionCb.value);
     }
   }
 };
 
+// main game/deck elements
 const buildCard = (country, zIndex) => {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -213,7 +218,7 @@ const buildCard = (country, zIndex) => {
 };
 
 const buildDeck = (pageLoad = false, repeatIncorrect = false) => {
-  if (pageLoad && state.game.remaining.length > 0) {
+  if (pageLoad && state.game && state.game.remaining.length > 0) {
     // load from previous state
     countries = state.game.countries;
     remaining = state.game.remaining;
@@ -274,7 +279,6 @@ const getNextCard = (e) => {
 };
 
 const updateScore = () => {
-  // main score display
   for (const score of correctScore) {
     score.innerHTML = `${correct.length}`;
   }
@@ -297,6 +301,7 @@ const updateScore = () => {
   percentScore.innerHTML = `${percent}%`;
 };
 
+// reset handling
 const reset = () => {
   const checkedRegions = regionCheckboxes.filter((cb) => cb.checked);
   if (checkedRegions.length == 0) {
@@ -335,12 +340,13 @@ settingsModal.addEventListener("click", toggleShowSettings);
 resetBtn.addEventListener("click", reset);
 repeatBtn.addEventListener("click", repeat);
 toast.addEventListener("animationend", clearToast);
-
 correctBtn.addEventListener("click", getNextCard);
 incorrectBtn.addEventListener("click", getNextCard);
 
-// start
-loadState();
+// dynmically build remaining interface
 buildSettingsModal();
+
+// start game
+loadState();
 buildDeck(true, false);
 updateScore();
