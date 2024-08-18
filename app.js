@@ -118,6 +118,9 @@ const buildSettingsModal = () => {
           cardFrontCheckboxes.filter(
             (cb) => cb.value === allCardSettings.flag.value
           )[0].checked = false;
+          if (cardFrontCheckboxes.filter((cb) => cb.checked).length > 3) {
+            settingCb.checked = false;
+          }
         }
       }
     });
@@ -148,6 +151,9 @@ const buildSettingsModal = () => {
           cardBackCheckboxes.filter(
             (cb) => cb.value === allCardSettings.flag.value
           )[0].checked = false;
+          if (cardBackCheckboxes.filter((cb) => cb.checked).length > 3) {
+            settingCb.checked = false;
+          }
         }
       }
     });
