@@ -4113,7 +4113,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇩",
-    capital: "Khartum",
+    capital: "Khartoum",
   },
   {
     countryNameEn: "Laos",
