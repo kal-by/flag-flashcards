@@ -178,7 +178,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇦🇸",
-    capital: "Fagatogo",
+    capital: "Pago Pago",
   },
   {
     countryNameEn: "Austria",
@@ -196,7 +196,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇦🇹",
-    capital: "Wien",
+    capital: "Vienna",
   },
   {
     countryNameEn: "Australia",
@@ -340,7 +340,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇧🇪",
-    capital: "Bruxelles [Brussel]",
+    capital: "Brussels",
   },
   {
     countryNameEn: "Burkina Faso",
@@ -394,7 +394,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇧🇭",
-    capital: "al-Manama",
+    capital: "Manama",
   },
   {
     countryNameEn: "Burundi",
@@ -412,7 +412,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇧🇮",
-    capital: "Bujumbura",
+    capital: "Gitega",
   },
   {
     countryNameEn: "Benin",
@@ -742,7 +742,7 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇨🇱",
-    capital: "Santiago de Chile",
+    capital: "Santiago",
   },
   {
     countryNameEn: "Cameroon",
@@ -760,7 +760,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇨🇲",
-    capital: "Yaounde",
+    capital: "Yaoundé",
   },
   {
     countryNameEn: "China",
@@ -778,7 +778,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇨🇳",
-    capital: "Peking",
+    capital: "Beijing",
   },
   {
     countryNameEn: "Colombia",
@@ -796,7 +796,7 @@ export default [
     areaCodes: [],
     region: "South America",
     flag: "🇨🇴",
-    capital: "Bogota",
+    capital: "Bogotá",
   },
   {
     countryNameEn: "Costa Rica",
@@ -832,7 +832,7 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇨🇺",
-    capital: "La Habana",
+    capital: "Havana",
   },
   {
     countryNameEn: "Cabo Verde",
@@ -994,7 +994,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇩🇿",
-    capital: "Alger",
+    capital: "Algiers",
   },
   {
     countryNameEn: "Ecuador",
@@ -1066,7 +1066,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇪🇭",
-    capital: "El-Aai",
+    capital: "Laayoune",
   },
   {
     countryNameEn: "Eritrea",
@@ -1121,7 +1121,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇪🇹",
-    capital: "Addis Abeba",
+    capital: "Addis Ababa",
   },
   {
     countryNameEn: "Finland",
@@ -1139,7 +1139,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇫🇮",
-    capital: "Helsinki [Helsingfors]",
+    capital: "Helsinki",
   },
   {
     countryNameEn: "Fiji",
@@ -1160,7 +1160,7 @@ export default [
     capital: "Suva",
   },
   {
-    countryNameEn: "Federated States of Micronesia",
+    countryNameEn: "Micronesia",
     countryNameLocal: "Micronesia",
     countryCode: "FM",
     ccTLD: ".fm",
@@ -1410,7 +1410,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇬🇷",
-    capital: "Athenai",
+    capital: "Athens",
   },
   {
     countryNameEn: "South Georgia and the South Sandwich Islands",
@@ -1446,7 +1446,7 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇬🇹",
-    capital: "Ciudad de Guatemala",
+    capital: "Guatemala City",
   },
   {
     countryNameEn: "Guam",
@@ -1464,7 +1464,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇬🇺",
-    capital: "Aga",
+    capital: "Hagåtña",
   },
   {
     countryNameEn: "Guinea-Bissau",
@@ -1608,7 +1608,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇮🇩",
-    capital: "Jakarta",
+    capital: "Nusantara",
   },
   {
     countryNameEn: "Ireland",
@@ -1753,7 +1753,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇮🇹",
-    capital: "Roma",
+    capital: "Rome",
   },
   {
     countryNameEn: "Jersey",
@@ -1771,7 +1771,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇯🇪",
-    capital: "St Helier",
+    capital: "Saint Helier",
   },
   {
     countryNameEn: "Jamaica",
@@ -1933,7 +1933,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇰🇮",
-    capital: "Bairiki",
+    capital: "South Tarawa",
   },
   {
     countryNameEn: "Saint Kitts and Nevis",
@@ -1969,7 +1969,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇰🇼",
-    capital: "Kuwait",
+    capital: "Kuwait City",
   },
   {
     countryNameEn: "Kazakhstan",
@@ -2131,7 +2131,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇱🇺",
-    capital: "Luxembourg City",
+    capital: "Luxembourg",
   },
   {
     countryNameEn: "Latvia",
@@ -2203,7 +2203,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇲🇨",
-    capital: "Monaco-Ville",
+    capital: "Monaco",
   },
   {
     countryNameEn: "Montenegro",
@@ -2293,7 +2293,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇲🇲",
-    capital: "Rangoon (Yangon)",
+    capital: "Naypyidaw",
   },
   {
     countryNameEn: "Mongolia",
@@ -2311,7 +2311,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇲🇳",
-    capital: "Ulan Bator",
+    capital: "Ulaanbaatar",
   },
   {
     countryNameEn: "Macao",
@@ -2419,7 +2419,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇲🇺",
-    capital: "Port-Louis",
+    capital: "Port Louis",
   },
   {
     countryNameEn: "Maldives",
@@ -2438,7 +2438,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇲🇻",
-    capital: "Male",
+    capital: "Malé",
   },
   {
     countryNameEn: "Malawi",
@@ -2474,7 +2474,7 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇲🇽",
-    capital: "Ciudad de M",
+    capital: "Mexico City",
   },
   {
     countryNameEn: "Malaysia",
@@ -2546,7 +2546,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇳🇨",
-    capital: "Noum",
+    capital: "Nouméa",
   },
   {
     countryNameEn: "Norfolk Island",
@@ -2709,7 +2709,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇴🇲",
-    capital: "Masqat",
+    capital: "Mascat",
   },
   {
     countryNameEn: "Panama",
@@ -2727,7 +2727,7 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇵🇦",
-    capital: "Ciudad de Panamá",
+    capital: "Panama City",
   },
   {
     countryNameEn: "Peru",
@@ -2817,7 +2817,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇵🇱",
-    capital: "Warszawa",
+    capital: "Warsaw",
   },
   {
     countryNameEn: "Saint Pierre and Miquelon",
@@ -2907,7 +2907,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇵🇹",
-    capital: "Lisboa",
+    capital: "Lisbon",
   },
   {
     countryNameEn: "Palau",
@@ -2925,7 +2925,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇵🇼",
-    capital: "Koror",
+    capital: "Ngerulmud",
   },
   {
     countryNameEn: "Paraguay",
@@ -2997,7 +2997,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇷🇴",
-    capital: "Bucuresti",
+    capital: "Bucharest",
   },
   {
     countryNameEn: "Serbia",
@@ -3144,7 +3144,7 @@ export default [
     capital: "Singapore",
   },
   {
-    countryNameEn: "Saint Helena, Ascension and Tristan da Cunha",
+    countryNameEn: "Saint Helena, Ascension, and Tristan da Cunha",
     countryNameLocal: "Saint Helena",
     countryCode: "SH",
     ccTLD: ".sh",
@@ -3324,7 +3324,7 @@ export default [
     capital: "Juba",
   },
   {
-    countryNameEn: "Sao Tome and Principe",
+    countryNameEn: "São Tomé and Príncipe",
     countryNameLocal: "São Tomé e Príncipe",
     countryCode: "ST",
     ccTLD: ".st",
@@ -3591,7 +3591,7 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇹🇹",
-    capital: "Port-of-Spain",
+    capital: "Port of Spain",
   },
   {
     countryNameEn: "Tuvalu",
@@ -3717,7 +3717,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇺🇿",
-    capital: "Toskent",
+    capital: "Tashkent",
   },
   {
     countryNameEn: "Saint Vincent and the Grenadines",
@@ -3825,7 +3825,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇻🇺",
-    capital: "Port-Vila",
+    capital: "Port Vila",
   },
   {
     countryNameEn: "Wallis and Futuna",
@@ -3843,7 +3843,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇼🇫",
-    capital: "Mata-Utu",
+    capital: "Mata Utu",
   },
   {
     countryNameEn: "Samoa",
@@ -3915,7 +3915,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇿🇦",
-    capital: "Pretoria",
+    capital: "Bloemfontein, Cape Town, Pretoria",
   },
   {
     countryNameEn: "Zambia",
@@ -3969,7 +3969,7 @@ export default [
     areaCodes: [],
     region: "Africa",
     flag: "🇸🇿",
-    capital: "Mbabane",
+    capital: "Mbabane, Lobamba",
   },
   {
     countryNameEn: "North Macedonia",
@@ -4059,7 +4059,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇲🇩",
-    capital: "Chisinau",
+    capital: "Chișinău",
   },
   {
     countryNameEn: "Gambia",
@@ -4095,7 +4095,7 @@ export default [
     areaCodes: [],
     region: "North America",
     flag: "🇩🇴",
-    capital: "Santo Domingo de Guzm",
+    capital: "Santo Domingo",
   },
   {
     countryNameEn: "Sudan",
@@ -4152,7 +4152,7 @@ export default [
     capital: "Taipei",
   },
   {
-    countryNameEn: "Republic of the Congo",
+    countryNameEn: "Congo",
     countryNameLocal: "République du Congo",
     countryCode: "CG",
     ccTLD: ".cg",
@@ -4455,7 +4455,7 @@ export default [
     areaCodes: [],
     region: "Asia",
     flag: "🇮🇴",
-    capital: "Camp Thunder Cove",
+    capital: "Diego Garcia",
   },
   {
     countryNameEn: "Comoros",
@@ -4527,7 +4527,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇲🇵",
-    capital: "Garapan",
+    capital: "Saipan",
   },
   {
     countryNameEn: "Turks and Caicos Islands",
