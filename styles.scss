@@ -83,8 +83,10 @@ $color-disabled: rgb(74, 76, 82);
   margin: 0 auto;
   padding: 1rem;
   width: 80%;
+  height: 90%;
   max-width: 30rem;
   z-index: 1001;
+  overflow-y: auto;
 }
 
 // html elements
