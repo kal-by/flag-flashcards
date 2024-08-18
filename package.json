@@ -1,7 +1,7 @@
 {
-  "name": "flag-flashcards",
+  "name": "learn-the-world",
   "version": "0.5.0",
-  "description": "World flags flashcard game",
+  "description": "World countries flashcard game",
   "author": "David Himelick",
   "scripts": {
     "start": "vite --host",
