@@ -3483,7 +3483,7 @@ export default [
     areaCodes: [],
     region: "Oceania",
     flag: "🇹🇰",
-    capital: "Fakaofo",
+    capital: "None",
   },
   {
     countryNameEn: "Timor-Leste",
