@@ -105,7 +105,7 @@ const buildSettingsModal = () => {
     const settingCb = document.createElement("input");
     settingCb.type = "checkbox";
     settingCb.id = `${allCardSettings[setting].value}Front`;
-    settingCb.value = allCardSettings[setting].value;
+    settingCb.value = setting;
     settingCb.addEventListener("click", () => {
       if (settingCb.checked) {
         if (settingCb.value === allCardSettings.flag.value) {
@@ -135,7 +135,7 @@ const buildSettingsModal = () => {
     const settingCb = document.createElement("input");
     settingCb.type = "checkbox";
     settingCb.id = `${allCardSettings[setting].value}Back`;
-    settingCb.value = allCardSettings[setting].value;
+    settingCb.value = setting;
     settingCb.addEventListener("click", () => {
       if (settingCb.checked) {
         if (settingCb.value === allCardSettings.flag.value) {
@@ -172,12 +172,12 @@ const initializeState = () => {
     regionCb.checked = true;
   }
 
-  state.settings.front = [allCardSettings.flag.value];
+  state.settings.front = ["flag"];
   for (const settingCb of cardFrontCheckboxes) {
     settingCb.checked = state.settings.front.includes(settingCb.value);
   }
 
-  state.settings.back = [allCardSettings.country.value];
+  state.settings.back = ["country"];
   for (const settingCb of cardBackCheckboxes) {
     settingCb.checked = state.settings.back.includes(settingCb.value);
   }
@@ -301,7 +301,7 @@ const toggleShowSettings = (e) => {
 // main game/deck elements
 const buildCardSide = (country, settings) => {
   const side = document.createElement("div");
-  if (settings[0] === allCardSettings.flag.value) {
+  if (settings[0] === "flag") {
     side.style.backgroundImage = getFlagStyle(
       country.countryCode.toLowerCase()
     );
@@ -310,8 +310,14 @@ const buildCardSide = (country, settings) => {
     display.classList.add("cardDisplay");
     display.classList.add("vcentered");
     for (const setting of settings) {
+      const hint = document.createElement("p");
+      hint.classList.add("hint");
+      hint.classList.add("mb-0");
+      hint.innerHTML = `${allCardSettings[setting].name}`;
       const value = document.createElement("h1");
-      value.innerText += `${country[setting]}`;
+      value.classList.add("mt-0");
+      value.innerText += `${country[allCardSettings[setting].value]}`;
+      display.appendChild(hint);
       display.appendChild(value);
     }
     side.appendChild(display);
@@ -484,7 +490,6 @@ const repeat = () => {
   buildDeck(false, true);
   updateScore();
   toggleShowSettings({ target: settingsBtn });
-  // loadState();
 };
 
 // add event listeners
