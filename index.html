@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>flags @ kal.by</title>
+    <title>learn the world</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles.scss" />
   </head>
@@ -12,8 +12,8 @@
       <div class="modal-content hcentered">
         <h2>How to Play</h2>
         <ol class="block hleft">
-          <li>Guess (in your head!) the flag's country.</li>
-          <li>Click the flag to flip the card and check your answer.</li>
+          <li>Quiz yourself on whatever info you'd like.</li>
+          <li>Click the card to flip the card and check your answer.</li>
           <li>Click the Correct or Incorrect button to mark your answer.</li>
         </ol>
         <hr />
@@ -23,7 +23,7 @@
           <a href="https://flagpedia.net" target="_blank">Flagpedia</a>
         </p>
         <p>
-          Country data from
+          Most country data from
           <a
             href="https://github.com/LucianoGanga/country-codes-list"
             target="_blank"
@@ -32,6 +32,13 @@
           (<a href="licenses/country-codes-list/LICENSE" target="_blank"
             >license</a
           >)
+        </p>
+        <p>
+          Capitals from
+          <a href="https://github.com/samayo/country-json" target="_blank"
+            >country>json</a
+          >
+          (<a href="licenses/country-json/LICENSE" target="_blank">license</a>)
         </p>
         <p>Built with <a href="https://vitejs.dev">Vite</a></p>
       </div>
@@ -63,7 +70,7 @@
         <hr />
         <p class="hint">
           Use <strong>Reset</strong> to start over or
-          <strong>Repeat incorrect</strong> to show only incorrect flags.
+          <strong>Repeat incorrect</strong> to show only incorrect cards.
         </p>
         <div class="container">
           <button class="control danger" id="resetBtn">Reset</button>
@@ -72,16 +79,31 @@
           </button>
         </div>
         <hr />
-        <h2 class="mb-0">Regions</h2>
+        <h1 class="mb-0">Settings</h1>
         <p class="hint mt-0">(saved and applied upon <strong>Reset</strong>)</p>
+        <h2 class="mb-0">Regions</h2>
         <div class="hcentered">
           <div class="block hleft" id="regionSettings"></div>
+        </div>
+        <div class="container">
+          <div class="hcentered">
+            <h2 class="mb-0 hcentered">Card front</h2>
+            <div class="hcentered">
+              <div class="block hleft" id="cardFrontSettings"></div>
+            </div>
+          </div>
+          <div class="hcentered">
+            <h2 class="mb-0 hcentered">Card back</h2>
+            <div class="hcentered">
+              <div class="block hleft" id="cardBackSettings"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="container hcentered">
       <button class="nav" id="howToBtn">?</button>
-      <h1 class="nav">flags @ kal.by</h1>
+      <h1 class="nav">learn the world</h1>
       <button class="nav" id="settingsBtn">⋮</button>
     </div>
     <div class="container hcentered">

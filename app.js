@@ -12,6 +12,13 @@ const allRegions = [
   "South America",
 ];
 const allCountries = countryData;
+const allCardSettings = {
+  flag: { name: "Flag", value: "flag" },
+  country: { name: "Country", value: "countryNameEn" },
+  capital: { name: "Capital", value: "capital" },
+  cctld: { name: "Top-level Domain", value: "ccTLD" },
+  ccc: { name: "Calling Code", value: "countryCallingCode" },
+};
 
 // game state variables
 let state = {};
@@ -27,6 +34,10 @@ const settingsModal = document.getElementById("settingsModal");
 const settingsBtn = document.getElementById("settingsBtn");
 const regionSettings = document.getElementById("regionSettings");
 const regionCheckboxes = [];
+const cardFrontSettings = document.getElementById("cardFrontSettings");
+const cardFrontCheckboxes = [];
+const cardBackSettings = document.getElementById("cardBackSettings");
+const cardBackCheckboxes = [];
 const resetBtn = document.getElementById("resetBtn");
 const repeatBtn = document.getElementById("repeatBtn");
 const toast = document.getElementById("toast");
@@ -71,24 +82,82 @@ const slideCardRight = (card) => {
 
 // dynamic interface elements (other than deck)
 const buildSettingsModal = () => {
+  // build region settings
   for (const region of allRegions) {
     const regionCb = document.createElement("input");
     regionCb.type = "checkbox";
-    regionCb.name = region;
+    regionCb.id = region;
     regionCb.value = region;
     regionCheckboxes.push(regionCb);
     const regionLabel = document.createElement("label");
     const regionCount = allCountries.filter((country) => {
-      return country.region == region;
+      return country.region === region;
     }).length;
     regionLabel.setAttribute("for", region);
-    regionLabel.innerHTML = `${region} (${regionCount} flags)`;
-    regionLabel.addEventListener("click", () => {
-      regionCb.click();
-    });
+    regionLabel.innerHTML = `${region} (${regionCount} countries)`;
     regionSettings.appendChild(regionCb);
     regionSettings.appendChild(regionLabel);
     regionSettings.appendChild(document.createElement("br"));
+  }
+
+  // build front card settings
+  for (const setting in allCardSettings) {
+    const settingCb = document.createElement("input");
+    settingCb.type = "checkbox";
+    settingCb.id = `${allCardSettings[setting].value}Front`;
+    settingCb.value = allCardSettings[setting].value;
+    settingCb.addEventListener("click", () => {
+      if (settingCb.checked) {
+        if (settingCb.value === allCardSettings.flag.value) {
+          for (const otherCb of cardFrontCheckboxes.filter(
+            (cb) => cb.value !== allCardSettings.flag.value
+          )) {
+            otherCb.checked = false;
+          }
+        } else {
+          cardFrontCheckboxes.filter(
+            (cb) => cb.value === allCardSettings.flag.value
+          )[0].checked = false;
+        }
+      }
+    });
+    cardFrontCheckboxes.push(settingCb);
+    const settingLabel = document.createElement("label");
+    settingLabel.setAttribute("for", `${allCardSettings[setting].value}Front`);
+    settingLabel.innerHTML = `${allCardSettings[setting].name}`;
+    cardFrontSettings.appendChild(settingCb);
+    cardFrontSettings.appendChild(settingLabel);
+    cardFrontSettings.append(document.createElement("br"));
+  }
+
+  // build back card settings
+  for (const setting in allCardSettings) {
+    const settingCb = document.createElement("input");
+    settingCb.type = "checkbox";
+    settingCb.id = `${allCardSettings[setting].value}Back`;
+    settingCb.value = allCardSettings[setting].value;
+    settingCb.addEventListener("click", () => {
+      if (settingCb.checked) {
+        if (settingCb.value === allCardSettings.flag.value) {
+          for (const otherCb of cardBackCheckboxes.filter(
+            (cb) => cb.value !== allCardSettings.flag.value
+          )) {
+            otherCb.checked = false;
+          }
+        } else {
+          cardBackCheckboxes.filter(
+            (cb) => cb.value === allCardSettings.flag.value
+          )[0].checked = false;
+        }
+      }
+    });
+    cardBackCheckboxes.push(settingCb);
+    const settingLabel = document.createElement("label");
+    settingLabel.setAttribute("for", `${allCardSettings[setting].value}Back`);
+    settingLabel.innerHTML = `${allCardSettings[setting].name}`;
+    cardBackSettings.appendChild(settingCb);
+    cardBackSettings.appendChild(settingLabel);
+    cardBackSettings.append(document.createElement("br"));
   }
 };
 
@@ -97,14 +166,27 @@ const initializeState = () => {
   localStorage.clear();
   state.version = version;
   state.settings = {};
+
   state.settings.regions = allRegions.slice(0);
   for (const regionCb of regionCheckboxes) {
     regionCb.checked = true;
   }
+
+  state.settings.front = [allCardSettings.flag.value];
+  for (const settingCb of cardFrontCheckboxes) {
+    settingCb.checked = state.settings.front.includes(settingCb.value);
+  }
+
+  state.settings.back = [allCardSettings.country.value];
+  for (const settingCb of cardBackCheckboxes) {
+    settingCb.checked = state.settings.back.includes(settingCb.value);
+  }
+
   countries = allCountries.filter((country) =>
     state.settings.regions.includes(country.region)
   );
   shuffle(countries);
+
   localStorage.setItem("state", JSON.stringify(state));
 };
 
@@ -112,37 +194,68 @@ const loadState = () => {
   const lsState = JSON.parse(localStorage.getItem("state"));
   if (
     lsState &&
-    lsState.version == version &&
-    lsState.settings.regions.length > 0
+    lsState.version === version &&
+    lsState.settings.regions.length > 0 &&
+    lsState.settings.front.length > 0 &&
+    lsState.settings.back.length > 0 &&
+    !lsState.settings.front.some((s) => lsState.settings.back.includes(s))
   ) {
     state = lsState;
     for (const regionCb of regionCheckboxes) {
       regionCb.checked = state.settings.regions.includes(regionCb.value);
+    }
+    for (const settingCb of cardFrontCheckboxes) {
+      settingCb.checked = state.settings.front.includes(settingCb.value);
+    }
+    for (const settingCb of cardBackCheckboxes) {
+      settingCb.checked = state.settings.back.includes(settingCb.value);
     }
   } else {
     initializeState();
   }
 };
 
-const saveState = () => {
+const saveGame = () => {
   state.game = {
     countries: countries,
     remaining: remaining,
     correct: correct,
     incorrect: incorrect,
   };
+
+  localStorage.setItem("state", JSON.stringify(state));
+};
+
+const saveState = () => {
+  saveGame();
+
   state.settings.regions = [];
   for (const regionCb of regionCheckboxes) {
     if (regionCb.checked) {
       state.settings.regions.push(regionCb.value);
     }
   }
+
+  state.settings.front = [];
+  for (const settingCb of cardFrontCheckboxes) {
+    if (settingCb.checked) {
+      state.settings.front.push(settingCb.value);
+    }
+  }
+
+  state.settings.back = [];
+  for (const settingCb of cardBackCheckboxes) {
+    if (settingCb.checked) {
+      state.settings.back.push(settingCb.value);
+    }
+  }
+
   localStorage.setItem("state", JSON.stringify(state));
 };
 
 // modal/toast handling
 const showToast = (message, type) => {
-  if (toast.style.animationPlayState == "running") {
+  if (toast.style.animationPlayState === "running") {
     return;
   }
   toast.innerHTML = message;
@@ -158,7 +271,7 @@ const clearToast = () => {
 };
 
 const toggleShowHowTo = (e) => {
-  if (e.target == howToBtn || e.target == howToModal) {
+  if (e.target === howToBtn || e.target === howToModal) {
     toggleHidden(howToModal);
   }
 };
@@ -167,48 +280,59 @@ const toggleShowSettings = (e) => {
   // don't allow settings modal to close if game is over
   if (
     !settingsModal.classList.contains("hidden") &&
-    correct.length + incorrect.length == countries.length
+    correct.length + incorrect.length === countries.length
   ) {
     return;
   }
-  if (e.target == settingsBtn || e.target == settingsModal) {
+  if (e.target === settingsBtn || e.target === settingsModal) {
     toggleHidden(settingsModal);
     for (const regionCb of regionCheckboxes) {
       regionCb.checked = state.settings.regions.includes(regionCb.value);
+    }
+    for (const settingCb of cardFrontCheckboxes) {
+      settingCb.checked = state.settings.front.includes(settingCb.value);
+    }
+    for (const settingCb of cardBackCheckboxes) {
+      settingCb.checked = state.settings.back.includes(settingCb.value);
     }
   }
 };
 
 // main game/deck elements
+const buildCardSide = (country, settings) => {
+  const side = document.createElement("div");
+  if (settings[0] === allCardSettings.flag.value) {
+    side.style.backgroundImage = getFlagStyle(
+      country.countryCode.toLowerCase()
+    );
+  } else {
+    const display = document.createElement("div");
+    display.classList.add("cardDisplay");
+    display.classList.add("vcentered");
+    for (const setting of settings) {
+      const value = document.createElement("h1");
+      value.innerText += `${country[setting]}`;
+      display.appendChild(value);
+    }
+    side.appendChild(display);
+  }
+  return side;
+};
+
 const buildCard = (country, zIndex) => {
   const card = document.createElement("div");
   card.classList.add("card");
   card.style.zIndex = zIndex;
   toggleHidden(card);
 
-  const front = document.createElement("div");
+  const front = buildCardSide(country, state.settings.front);
   front.classList.add("cardFront");
-  front.style.backgroundImage = getFlagStyle(country.countryCode.toLowerCase());
 
-  const back = document.createElement("div");
+  const back = buildCardSide(country, state.settings.back);
   back.classList.add("cardBack");
-
-  const backDisplay = document.createElement("div");
-  backDisplay.classList.add("cardDisplay");
-  backDisplay.classList.add("vcentered");
-  const countryNameEn = document.createElement("h1");
-  countryNameEn.innerText = `${country.countryNameEn}`;
-  const countryNameLocal = document.createElement("h2");
-  countryNameLocal.innerText = `${country.countryNameLocal}`;
-  const countryCallingCode = document.createElement("h3");
-  countryCallingCode.innerText = `${country.ccTLD} | ${country.countryCallingCode}`;
-  backDisplay.appendChild(countryNameEn);
-  backDisplay.appendChild(countryNameLocal);
-  backDisplay.appendChild(countryCallingCode);
 
   card.appendChild(front);
   card.appendChild(back);
-  back.appendChild(backDisplay);
 
   card.addEventListener("click", flipCard(front, back));
 
@@ -246,15 +370,15 @@ const buildDeck = (pageLoad = false, repeatIncorrect = false) => {
   }
 
   toggleHidden(remaining[0].card);
-  saveState();
+  saveGame();
 };
 
 const getNextCard = (e) => {
   const current = remaining[0];
   let left = true;
-  if (e.srcElement == correctBtn) {
+  if (e.srcElement === correctBtn) {
     correct.push(current);
-  } else if (e.srcElement == incorrectBtn) {
+  } else if (e.srcElement === incorrectBtn) {
     incorrect.push(current);
     left = false;
   }
@@ -273,7 +397,7 @@ const getNextCard = (e) => {
 
   remaining.shift();
   updateScore();
-  saveState();
+  saveGame();
 };
 
 const updateScore = () => {
@@ -300,10 +424,42 @@ const updateScore = () => {
 };
 
 // reset handling
-const reset = () => {
+const validateSettings = () => {
   const checkedRegions = regionCheckboxes.filter((cb) => cb.checked);
-  if (checkedRegions.length == 0) {
+  if (checkedRegions.length === 0) {
     showToast("Please select at least one region to reset", "danger");
+    return false;
+  }
+
+  const checkedFront = cardFrontCheckboxes.filter((cb) => cb.checked);
+  if (checkedFront.length === 0) {
+    showToast("Please select at least one value for card front", "danger");
+    return false;
+  }
+
+  const checkedBack = cardBackCheckboxes.filter((cb) => cb.checked);
+  if (checkedBack.length === 0) {
+    showToast("Please select at least one value for card back", "danger");
+    return false;
+  }
+
+  for (const fcb of checkedFront) {
+    for (const bcb of checkedBack) {
+      if (fcb.value === bcb.value) {
+        showToast(
+          "Please select different information for card front and back",
+          "danger"
+        );
+        return false;
+      }
+    }
+  }
+
+  return true;
+};
+
+const reset = () => {
+  if (!validateSettings()) {
     return;
   }
   correct.length = 0;
@@ -316,11 +472,11 @@ const reset = () => {
 };
 
 const repeat = () => {
-  if (correct.length + incorrect.length == 0) {
+  if (correct.length + incorrect.length === 0) {
     showToast("No incorrect flags to repeat yet", "success");
     return;
   }
-  if (incorrect.length == 0) {
+  if (incorrect.length === 0) {
     showToast("No incorrect flags to repeat - good job!", "success");
     return;
   }
@@ -328,6 +484,7 @@ const repeat = () => {
   buildDeck(false, true);
   updateScore();
   toggleShowSettings({ target: settingsBtn });
+  // loadState();
 };
 
 // add event listeners
