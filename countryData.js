@@ -2131,7 +2131,7 @@ export default [
     areaCodes: [],
     region: "Europe",
     flag: "🇱🇺",
-    capital: "Luxembourg [Luxemburg/L",
+    capital: "Luxembourg City",
   },
   {
     countryNameEn: "Latvia",
